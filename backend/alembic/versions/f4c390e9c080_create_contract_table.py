@@ -1,8 +1,8 @@
-"""create_table_hopdong
+"""create_contract_table
 
-Revision ID: e0d524a2ef36
-Revises: 33e10b7bda9a
-Create Date: 2023-12-01 11:12:54.698979
+Revision ID: f4c390e9c080
+Revises: bb8038855510
+Create Date: 2023-12-02 10:47:19.126320
 
 """
 from typing import Sequence, Union
@@ -12,14 +12,14 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = 'e0d524a2ef36'
-down_revision: Union[str, None] = '33e10b7bda9a'
+revision: str = 'f4c390e9c080'
+down_revision: Union[str, None] = 'bb8038855510'
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 
 
 def upgrade() -> None:
-    op.create_table('hopdong',
+    op.create_table('contract',
                     sa.Column("mahopdong", sa.String(50), nullable=False, unique=True),
                     sa.Column("giaidoan", sa.Integer(), nullable=False),
                     sa.Column("phithanhtoan", sa.Integer(), nullable=False),
@@ -29,8 +29,9 @@ def upgrade() -> None:
                     sa.Column("ngayttthucte", sa.DATE(), nullable=False),
                     sa.Column("owner_sk", sa.Integer(), nullable=False),
                     sa.PrimaryKeyConstraint("mahopdong"))
-    op.create_foreign_key('hopdong_fk', source_table="hopdong", referent_table="chitietsukien",
-                          local_cols=['owner_sk'], remote_cols=['id'], ondelete="CASCADE")
+
+    op.create_foreign_key('hopdong_fk', source_table="contract", referent_table="detail_event",
+                          local_cols=['owner_sk'], remote_cols=['id'], ondelete="CASCADE", onupdate="CASCADE")
 def downgrade() -> None:
-    op.drop_constraint("hopdong_fk", "hopdong")
-    op.drop_table("hopdong")
+    op.drop_constraint("hopdong_fk", "contract")
+    op.drop_table("contract")

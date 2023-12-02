@@ -5,41 +5,32 @@ from sqlalchemy.orm import relationship
 from .database import Base
 
 
-class NguoiDung(Base):
-    __tablename__ = "nguoidung"
+
+
+class User(Base):
+    __tablename__ = "users"
 
     id = Column(Integer, primary_key=True, nullable=False, unique=True, autoincrement=True)
     email = Column(String(255), nullable=False, unique=True)
     password = Column(String(255), nullable=False)
-    role = Column(String(255), nullable=False)
-    describe = Column(String(255))
+    role = Column(String(), nullable=False)
     created_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('now()'))
-class NhanVien(Base):
-    __tablename__ = "nhanvien"
 
-    maNV = Column(Integer, primary_key=True, nullable=False)
-    username = Column(String(255), nullable=False)
+
+class InfoUser(Base):
+    __tablename__ = "infouser"
+
+    code = Column(Integer, unique=True, primary_key=True, nullable=False)
+    is_active = Column(Boolean, nullable=False)
+    first_name = Column(String(), nullable=False)
+    last_name = Column(String(), nullable=False)
     gender = Column(Boolean, nullable=False)
     dateofbirth = Column(DATE, nullable=False)
-    diachi = Column(String(255))
+    address = Column(String(255))
     phonenumber = Column(String(20), nullable=False, unique=True)
-    email = Column(String(50), nullable=False, unique=True)
-    cosalary = Column(Float, nullable=False)
+    salary = Column(Float)
 
-    owner_id = Column(Integer, ForeignKey("nguoidung.id", ondelete= "CASCADE"), nullable= False)
-
-
-class KhachHang(Base):
-    __tablename__ = "khachhang"
-
-    maKH = Column(Integer, primary_key=True, nullable=False)
-    username = Column(String(255), nullable=False)
-    diachi = Column(String(255))
-    phonenumber = Column(String(20), nullable=False, unique=True)
-    email = Column(String(50), nullable=False, unique=True)
-
-    owner_id = Column(Integer, ForeignKey("nguoidung.id", ondelete= "CASCADE"), nullable= False)
-
+    owner_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE", onupdate="CASCADE"), nullable=False)
 
 class Event(Base):
     __tablename__ = "sukien"
@@ -47,24 +38,23 @@ class Event(Base):
     maCT = Column(String(20), primary_key=True, nullable=False)
     name = Column(String(50), nullable=False)
     detail = Column(String(100))
-    owner_id = Column(Integer, ForeignKey("nguoidung.id"), nullable=False)
+    owner_id = Column(Integer, ForeignKey("users.id", onupdate="CASCADE", ondelete="CASCADE"), nullable=False)
 
-    owner = relationship("NguoiDung")
+    owner = relationship("User")
 
 class DetailEvent(Base):
     __tablename__ = "chitietsukien"
 
     id = Column(Integer, primary_key=True, nullable=False, unique=True)
-    maKH = Column(Integer, ForeignKey("khachhang.maKH"), nullable=False)
-    maCT = Column(String(20), ForeignKey("sukien.maCT"), nullable=False)
-    maNV = Column(Integer, ForeignKey("nhanvien.maNV"), nullable=False)
+    user_code = Column(Integer, ForeignKey("infouser.code"), nullable=False)
     created_at = Column(DATE, nullable=False, server_default=text('now()'))
     ngaybatdau = Column(DATE, nullable=False)
     ngayketthuc = Column(DATE, nullable=False)
     detail = Column(String)
-    songuoithamgia = Column(Integer, nullable=False)
     diadiem = Column(String(100), nullable=False)
     mucphat = Column(Integer)
+
+    owner_sk = Column(String(20), ForeignKey("sukien.maCT", onupdate="CASCADE", ondelete="CASCADE"), nullable=False)
 
 class HopDong(Base):
     __tablename__ = "hopdong"
@@ -77,7 +67,7 @@ class HopDong(Base):
     ngaytttheohd = Column(DATE, nullable=False)
     ngayttthucte = Column(DATE, nullable=False)
 
-    owner_sk = Column(Integer, ForeignKey("chitietsukien.id", ondelete="CASCADE"), nullable=False)
+    owner_sk = Column(Integer, ForeignKey("chitietsukien.id", ondelete="CASCADE", onupdate="CASCADE"), nullable=False)
 
     owner = relationship("DetailEvent")
 
@@ -87,4 +77,4 @@ class PhiPhat(Base):
     id = Column(Integer, primary_key=True, nullable=False)
     giaidoan = Column(Integer, nullable=False)
     phiphat = Column(Integer)
-    mahopdong = Column(String(50), ForeignKey("hopdong.mahopdong", ondelete="CASCADE"), nullable=False)
+    mahopdong = Column(String(50), ForeignKey("hopdong.mahopdong", ondelete="CASCADE", onupdate="CASCADE"), nullable=False)
