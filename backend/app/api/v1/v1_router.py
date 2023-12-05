@@ -1,26 +1,22 @@
 from fastapi import APIRouter, Depends
 
 # from .dependencies.auth import admin_role
-from .routes import auth, me, roles, event, users
-
+# from .routes import auth, me, roles, event, users
+from .routers import users
+from .routers import auth
 router = APIRouter()
 
-router.include_router(router=auth.router, prefix="/auth", tags=["auth"])
+router.include_router(router=auth.router, prefix="/auth", tags=["Authentication"])
+router.include_router(router=users.router, prefix="/users", tags=["Users"])
 
-router.include_router(router=me.router, tags=["self"])
+# router.include_router(router=me.router, tags=["self"])
 
-router.include_router(
-    router=users.router,
-    prefix="/users",
-    tags=["users"],
-    dependencies=[Depends(admin_role)],
-)
+#
+# router.include_router(
+#     router=roles.router,
+#     prefix="/roles",
+#     tags=["roles"],
+#     dependencies=[Depends(admin_role)],
+# )
 
-router.include_router(
-    router=roles.router,
-    prefix="/roles",
-    tags=["roles"],
-    dependencies=[Depends(admin_role)],
-)
-
-router.include_router(router=shops.router, prefix="/shops", tags=["shops"])
+# router.include_router(router=shops.router, prefix="/shops", tags=["shops"])
