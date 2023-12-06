@@ -23,11 +23,11 @@ def upgrade() -> None:
                     sa.Column("mact", sa.String(20), nullable=False),
                     sa.Column("name", sa.String(20), nullable=False),
                     sa.Column("detail", sa.String(100)),
-                    sa.Column("owner_id", sa.Integer(), nullable=False),
+                    sa.Column("owner", sa.Integer(), nullable=False),
                     sa.PrimaryKeyConstraint('mact')
                     )
-    op.create_foreign_key("event_fk", source_table="event", referent_table="users",
-                          local_cols=['owner_id'], remote_cols=['id'], ondelete="CASCADE", onupdate="CASCADE")
+    op.create_foreign_key("event_fk", source_table="event", referent_table="client",
+                          local_cols=['owner'], remote_cols=['makh'], ondelete="CASCADE", onupdate="CASCADE")
 
 def downgrade() -> None:
     op.drop_constraint('event_fk', table_name="event")
