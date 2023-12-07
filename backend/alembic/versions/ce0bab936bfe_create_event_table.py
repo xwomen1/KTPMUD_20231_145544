@@ -27,7 +27,7 @@ def upgrade() -> None:
                     sa.PrimaryKeyConstraint('mact')
                     )
     op.create_foreign_key("event_fk", source_table="event", referent_table="client",
-                          local_cols=['owner'], remote_cols=['makh'], ondelete="CASCADE", onupdate="CASCADE")
+                          local_cols=['owner'], remote_cols=['makh'], ondelete="CASCADE")
 
 def downgrade() -> None:
     op.drop_constraint('event_fk', table_name="event")
