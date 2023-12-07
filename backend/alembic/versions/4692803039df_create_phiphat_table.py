@@ -25,7 +25,7 @@ def upgrade() -> None:
                     sa.Column("mahopdong", sa.String(50), nullable=False),
                     sa.PrimaryKeyConstraint("id"))
     op.create_foreign_key('phiphat_fk', source_table="phiphat", referent_table="contract",
-                          local_cols=['mahopdong'], remote_cols=['mahopdong'], ondelete="CASCADE", onupdate="CASCADE")
+                          local_cols=['mahopdong'], remote_cols=['mahopdong'], ondelete="CASCADE")
 
 def downgrade() -> None:
     op.drop_constraint("phiphat_fk","phiphat")
