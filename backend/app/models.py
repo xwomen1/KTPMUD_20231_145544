@@ -10,27 +10,37 @@ from .database import Base
 class User(Base):
     __tablename__ = "users"
 
-    id = Column(Integer, primary_key=True, nullable=False, index=True)
-    username = Column(String(255), nullable=False)
+    id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
     email = Column(String(255), nullable=False, unique=True)
-    is_active = Column(Boolean, nullable=False)
+    username = Column(String(255), nullable=False, unique=True)
     password = Column(String(255), nullable=False)
-    role = Column(String(), nullable=False)
-    created_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('now()'))
-
-
-class InfoUser(Base):
-    __tablename__ = "infouser"
-
-    code = Column(Integer, unique=True, primary_key=True, nullable=False)
-    full_name = Column(String(), nullable=False)
     gender = Column(Boolean, nullable=False)
-    birthofdate = Column(DATE, nullable=False)
-    address = Column(String(255))
+    dateofbirth = Column(DATE, nullable=False)
     phonenumber = Column(String(20), nullable=False, unique=True)
-    salary = Column(Float)
+    created_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('now()'))
+    role = Column(String, nullable=False)
+    is_active = Column(Boolean, nullable=False)
 
-    owner_id = Column(Integer, ForeignKey("users.id", _constraint="owner_id_fk", ondelete="CASCADE", onupdate="CASCADE"), nullable=False)
+class Employee(Base):
+    __tablename__ = "employee"
+
+    manv = Column(String, primary_key=True, nullable=False)
+    ngaybatdaucongtac = Column(DATE, nullable=False)
+    ngayketthuccongtac = Column(DATE, nullable=False)
+    owner_id = Column(Integer, ForeignKey("users.id", _constraint="employee_fk", ondelete="CASCADE"), nullable=False)
+
+    users = relationship("User", backref="employees")
+
+
+class Client(Base):
+    __tablename__ = "client"
+
+    makh = Column(Integer, primary_key=True, nullable=False)
+    address = Column(String(255))
+    owner_id = Column(Integer, ForeignKey("users.id", _constraint="client_fk", ondelete="CASCADE"), nullable=False)
+
+    users = relationship("User", backref="client")
+
 
 class Event(Base):
     __tablename__ = "event"
@@ -38,23 +48,24 @@ class Event(Base):
     mact = Column(String(20), primary_key=True, nullable=False)
     name = Column(String(50), nullable=False)
     detail = Column(String(100))
-    owner_id = Column(Integer, ForeignKey("users.id", _constraint="event_fk", onupdate="CASCADE", ondelete="CASCADE"), nullable=False)
+    ngaybatdau = Column(DATE, nullable=False)
+    ngayketthuc = Column(DATE, nullable=False)
+    owner = Column(Integer, ForeignKey("client.makh", _constraint="event_fk", ondelete="CASCADE"), nullable=False)
 
-    owner = relationship("User")
 
 class DetailEvent(Base):
     __tablename__ = "detail_event"
 
     id = Column(Integer, primary_key=True, nullable=False, unique=True)
-    user_code = Column(Integer, ForeignKey("infouser.code", _constraint="user_code_fk"), nullable=False)
-    created_at = Column(DATE, nullable=False, server_default=text('now()'))
-    start_date = Column(DATE, nullable=False)
-    end_date = Column(DATE, nullable=False)
+    songuoithamgia = Column(Integer, nullable=False)
+    ngaybatdau = Column(DATE, nullable=False)
+    ngayketthuc = Column(DATE, nullable=False)
     detail = Column(String)
     location = Column(String(100), nullable=False)
-    mucphat = Column(Integer)
 
-    owner_sk = Column(String(20), ForeignKey("event.mact", _constraint="owner_sk_fk", onupdate="CASCADE", ondelete="CASCADE"), nullable=False)
+    owner_event = Column(String(20), ForeignKey("event.mact", _constraint="owner_event_fk", ondelete="CASCADE"), nullable=False)
+
+    event = relationship("Event", backref="detail_event")
 
 class HopDong(Base):
     __tablename__ = "contract"
@@ -63,17 +74,16 @@ class HopDong(Base):
     giaidoan = Column(Integer, nullable=False)
     phithanhtoan = Column(Integer,nullable=False)
     motaphi = Column(String(100))
-    phuongthuctt = Column(String(50), nullable=False)
+    pt_thanhtoan = Column(String(50), nullable=False)
     ngaytttheohd = Column(DATE, nullable=False)
     ngayttthucte = Column(DATE, nullable=False)
 
-    owner_sk = Column(Integer, ForeignKey("detail_event.id", _constraint="hopdong_fk", ondelete="CASCADE", onupdate="CASCADE"), nullable=False)
-
-    owner = relationship("DetailEvent")
+    owner = Column(Integer, ForeignKey("event.mact", _constraint="hopdong_fk", ondelete="CASCADE"), nullable=False)
 
 class PhiPhat(Base):
     __tablename__ = "phiphat"
 
     id = Column(Integer, primary_key=True, nullable=False)
     phiphat = Column(Integer)
-    mahopdong = Column(String(50), ForeignKey("contract.mahopdong", _constraint="phiphat_fk", ondelete="CASCADE", onupdate="CASCADE"), nullable=False)
+    lydo = Column(String, nullable=False)
+    owner_detail = Column(String(50), ForeignKey("detail_event.id", _constraint="phiphat_fk", ondelete="CASCADE"), nullable=False)

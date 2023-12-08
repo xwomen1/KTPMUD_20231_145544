@@ -20,18 +20,18 @@ depends_on: Union[str, Sequence[str], None] = None
 
 def upgrade() -> None:
     op.create_table('contract',
-                    sa.Column("mahopdong", sa.String(50), nullable=False, unique=True),
+                    sa.Column("mahopdong", sa.String(50), nullable=False),
                     sa.Column("giaidoan", sa.Integer(), nullable=False),
                     sa.Column("phithanhtoan", sa.Integer(), nullable=False),
                     sa.Column("motaphi", sa.String(100)),
-                    sa.Column("phuongthuctt", sa.String(50), nullable=False),
+                    sa.Column("pt_thanhtoan", sa.String(50), nullable=False),
                     sa.Column("ngaytttheohd", sa.DATE(), nullable=False),
                     sa.Column("ngayttthucte", sa.DATE(), nullable=False),
-                    sa.Column("owner_sk", sa.Integer(), nullable=False),
+                    sa.Column("owner", sa.String(), nullable=False),
                     sa.PrimaryKeyConstraint("mahopdong"))
 
-    op.create_foreign_key('hopdong_fk', source_table="contract", referent_table="detail_event",
-                          local_cols=['owner_sk'], remote_cols=['id'], ondelete="CASCADE", onupdate="CASCADE")
+    op.create_foreign_key('hopdong_fk', source_table="contract", referent_table="event",
+                          local_cols=['owner'], remote_cols=['mact'], ondelete="CASCADE")
 def downgrade() -> None:
     op.drop_constraint("hopdong_fk", "contract")
     op.drop_table("contract")
