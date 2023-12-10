@@ -1,10 +1,8 @@
-from sqlalchemy import Column, ForeignKey, Integer, String, Boolean, DATE, Float
+from sqlalchemy import Column, ForeignKey, Integer, String, Boolean, DATE
 from sqlalchemy.sql.expression import text
 from sqlalchemy.sql.sqltypes import TIMESTAMP
 from sqlalchemy.orm import relationship
 from .database import Base
-
-
 
 
 class User(Base):
@@ -12,6 +10,7 @@ class User(Base):
 
     id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
     email = Column(String(255), nullable=False, unique=True)
+    fullname = Column(String(255), nullable=False)
     username = Column(String(255), nullable=False, unique=True)
     password = Column(String(255), nullable=False)
     gender = Column(Boolean, nullable=False)
