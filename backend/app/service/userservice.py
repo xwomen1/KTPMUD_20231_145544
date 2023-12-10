@@ -3,12 +3,10 @@ from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
 
 from app.models import User
-
 from app.schemas.user import UserBase, UserUpdate
 from app.service.passwordservice import get_password_hash, verify_password
 
-
-def get(db_session: Session, id_: int) -> Optional[User]:
+def get(db_session: Session, id_: int) -> Optional[UserBase]:
     return db_session.query(User).filter(User.id == id_).first()
 
 
@@ -22,16 +20,11 @@ def get_multiple(
     return db_session.query(User).offset(offset).limit(limit).all()
 
 
-def create(db_session: Session, user_in: UserBase) -> UserBase:
-    db_obj = User(
-        email=user_in.email,
-        username=user_in.username,
-        role=user_in.role,
-        password=get_password_hash(user_in.password),
-        is_active=True
-    )
+async def create(db_session: Session, user_in: UserBase):
+    db_obj = User(**user_in.model_dump())
     db_session.add(db_obj)
     db_session.commit()
+    db_session.refresh(db_obj)
     return db_obj
 
 

@@ -24,11 +24,10 @@ class Employee(Base):
     __tablename__ = "employee"
 
     manv = Column(String, primary_key=True, nullable=False)
+    salary = Column(Integer, nullable=False)
     ngaybatdaucongtac = Column(DATE, nullable=False)
     ngayketthuccongtac = Column(DATE, nullable=False)
-    owner_id = Column(Integer, ForeignKey("users.id", _constraint="employee_fk", ondelete="CASCADE"), nullable=False)
-
-    users = relationship("User", backref="employees")
+    owner_id = Column(Integer, nullable=False)
 
 
 class Client(Base):
@@ -36,9 +35,7 @@ class Client(Base):
 
     makh = Column(Integer, primary_key=True, nullable=False)
     address = Column(String(255))
-    owner_id = Column(Integer, ForeignKey("users.id", _constraint="client_fk", ondelete="CASCADE"), nullable=False)
-
-    users = relationship("User", backref="client")
+    owner_id = Column(Integer, nullable=False)
 
 
 class Event(Base):
@@ -49,7 +46,7 @@ class Event(Base):
     detail = Column(String(100))
     ngaybatdau = Column(DATE, nullable=False)
     ngayketthuc = Column(DATE, nullable=False)
-    owner = Column(Integer, ForeignKey("client.makh", _constraint="event_fk", ondelete="CASCADE"), nullable=False)
+    owner = Column(Integer, nullable=False)
 
 
 class DetailEvent(Base):
@@ -62,9 +59,8 @@ class DetailEvent(Base):
     detail = Column(String)
     location = Column(String(100), nullable=False)
 
-    owner_event = Column(String(20), ForeignKey("event.mact", _constraint="owner_event_fk", ondelete="CASCADE"), nullable=False)
+    owner_event = Column(String(20), nullable=False)
 
-    event = relationship("Event", backref="detail_event")
 
 class HopDong(Base):
     __tablename__ = "contract"
@@ -77,7 +73,7 @@ class HopDong(Base):
     ngaytttheohd = Column(DATE, nullable=False)
     ngayttthucte = Column(DATE, nullable=False)
 
-    owner = Column(Integer, ForeignKey("event.mact", _constraint="hopdong_fk", ondelete="CASCADE"), nullable=False)
+    owner = Column(Integer, nullable=False)
 
 class PhiPhat(Base):
     __tablename__ = "phiphat"
@@ -85,4 +81,4 @@ class PhiPhat(Base):
     id = Column(Integer, primary_key=True, nullable=False)
     phiphat = Column(Integer)
     lydo = Column(String, nullable=False)
-    owner_detail = Column(String(50), ForeignKey("detail_event.id", _constraint="phiphat_fk", ondelete="CASCADE"), nullable=False)
+    owner_detail = Column(String(50), nullable=False)
