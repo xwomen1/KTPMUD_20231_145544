@@ -3,7 +3,7 @@ from typing import Optional
 from datetime import date
 from .user import UserOut, UserBase
 class EmployeeBase(BaseModel):
-    manv: str
+    manv: str = "NV0001"
     salary: Optional[int]
     ngaybatdaucongtac: date
     ngayketthuccongtac: date

@@ -1,12 +1,11 @@
 from fastapi import APIRouter, Depends
 
-# from .dependencies.auth import admin_role
-# from .routes import auth, me, roles, event, users
-from .routers import users
-from .routers import auth
+from .routers import auth, admin, users, employee
 router = APIRouter()
 
 router.include_router(router=auth.router, prefix="/auth", tags=["Authentication"])
+router.include_router(router=admin.router, prefix="/admin", tags=["Admin"])
+router.include_router(router=employee.router, prefix="/employee", tags=["Employee"])
 router.include_router(router=users.router, prefix="/users", tags=["Users"])
 
 # router.include_router(router=me.router, tags=["self"])

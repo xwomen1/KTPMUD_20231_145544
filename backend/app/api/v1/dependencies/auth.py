@@ -1,4 +1,4 @@
-from fastapi import  Depends, HTTPException, status
+from fastapi import Depends, HTTPException, status
 from typing import Annotated
 
 from passlib.context import CryptContext
@@ -10,8 +10,8 @@ from app.config import settings
 from jose import jwt, JWTError
 from datetime import timedelta, datetime
 
+from app.service import passwordservice
 
-bcrypt_context = CryptContext(schemes=['bcrypt'], deprecated='auto')
 oauth2_bearer = OAuth2PasswordBearer(tokenUrl='api/v1/auth/login')
 
 
@@ -19,20 +19,20 @@ def authenticate_user(username: str, password: str, db):
     user = db.query(User).filter(User.username == username).first()
     if not user:
         return False
-    if not bcrypt_context.verify(password, user.password):
+    if not passwordservice.verify_password(password, user.password):
         return False
     return user
 
 
-def create_access_token(username: str, user_id: int,role: str, expires_delte: timedelta):
+def create_access_token(username: str, id: int, role: str, expires_delte: timedelta):
     encode = {
         'username': username,
-        'id': user_id,
+        'id': id,
         'role': role
     }
 
     expires = datetime.utcnow() + expires_delte
-    encode.update({'exp' : expires})
+    encode.update({'exp': expires})
 
     return jwt.encode(encode, settings.secret_key, algorithm=settings.algorithm)
 
@@ -40,10 +40,10 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)]):
     try:
         payload = jwt.decode(token, settings.secret_key, algorithms=[settings.algorithm])
         username: str = payload.get('username')
-        user_id: int = payload.get('id')
-        user_role: str = payload.get('role')
-        if username is None or user_id is None:
-            raise HTTPException(status_code= status.HTTP_401_UNAUTHORIZED, detail = 'Could not validate user.')
-        return {'username': username, 'id': user_id, 'role': user_role}
+        id: int = payload.get('id')
+        role: str = payload.get('role')
+        if username is None or id is None:
+            raise HTTPException(status_code= status.HTTP_401_UNAUTHORIZED, detail='Could not validate user.')
+        return {'username': username, 'id': id, 'role': role}
     except JWTError:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Could not validate user.')

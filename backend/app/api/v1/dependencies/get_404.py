@@ -2,7 +2,9 @@ from sqlalchemy.orm import Session
 from fastapi import Depends, HTTPException, Path, status
 from app.database import get_db
 from app import models
-from app.service import userservice
+from app.service.crud import userservice
+
+
 def get_user_or_404(
     db_session: Session = Depends(get_db),
     user_id: int = Path(..., alias="id", ge=1),

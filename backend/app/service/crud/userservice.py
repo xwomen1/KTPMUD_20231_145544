@@ -14,6 +14,14 @@ def get_by_email(db_session: Session, email: str) -> Optional[User]:
     return db_session.query(User).filter(User.email == email).first()
 
 
+def get_by_username(db_session: Session, username: str) -> Optional[User]:
+    return db_session.query(User).filter(User.username == username).first()
+
+
+def get_by_phonenumber(db_session: Session, phonenumber: str) -> Optional[User]:
+    return db_session.query(User).filter(User.phonenumber == phonenumber).first()
+
+
 def get_multiple(
     db_session: Session, *, offset: int = 0, limit: int = 100
 ) -> List[User]:

@@ -2,22 +2,22 @@ from typing import List, Optional
 from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
 
-from app.models import Employee
-from app.schemas.employee import EmployeeBase, EmployeeOut
+from app.models import Client
+from app.schemas.client import ClientBase, ClientOut
 from app.service.passwordservice import get_password_hash, verify_password
 
-def get(db_session: Session, makh: str) -> Optional[EmployeeOut]:
-    return db_session.query(Employee).filter(Employee.makh == makh).first()
+def get(db_session: Session, makh: str) -> Optional[ClientOut]:
+    return db_session.query(Client).filter(Client.makh == makh).first()
 
 
 def get_multiple(
     db_session: Session, *, offset: int = 0, limit: int = 100
-) -> List[Employee]:
-    return db_session.query(Employee).offset(offset).limit(limit).all()
+) -> List[Client]:
+    return db_session.query(Client).offset(offset).limit(limit).all()
 
 
-def create(db_session: Session, employee_in: EmployeeBase, owner_id_get: int):
-    db_obj = Employee(**employee_in.model_dump(), owner_id=owner_id_get)
+def create(db_session: Session, client_in: ClientBase, owner_id_get: int):
+    db_obj = Client(**client_in.model_dump(), owner_id=owner_id_get)
     db_session.add(db_obj)
     db_session.commit()
     db_session.refresh(db_obj)

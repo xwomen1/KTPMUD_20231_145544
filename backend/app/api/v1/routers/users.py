@@ -7,7 +7,7 @@ from fastapi import status
 
 from app.schemas.user import UserOut, UserUpdate
 from app.database import get_db
-from app.service import userservice
+from app.service.crud import userservice
 from app import models
 
 from ..dependencies.auth import get_current_user
@@ -37,7 +37,7 @@ async def get_all_user(user: user_dependency, db: db_dependency):
 
 
 @router.get("/{id}", response_model=UserOut)
-def get_user_by_id(user: user_dependency,user_get: models.User = Depends(get_user_or_404),):
+def get_user_by_id(user: user_dependency, user_get: models.User = Depends(get_user_or_404)):
     if user is None or user.get('user_role') != 'admin':
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Authentication Failed')
     """
@@ -47,8 +47,9 @@ def get_user_by_id(user: user_dependency,user_get: models.User = Depends(get_use
 
 
 @router.put("/change_password}", status_code=status.HTTP_200_OK)
-async def change_password(user_change: UserUpdate, user: user_dependency, db: db_dependency):
+async def change_password(db: db_dependency, user: user_dependency, user_change: UserUpdate):
     return userservice.update(db_session=db, user_in=user, user_change=user_change)
+
 
 @router.delete("/{id}", status_code=status.HTTP_200_OK)
 async def delete_user(user: user_dependency, db_session: db_dependency, user_delete: models.User = Depends(get_user_or_404) ):
