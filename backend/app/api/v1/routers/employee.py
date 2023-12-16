@@ -3,10 +3,11 @@ from sqlalchemy.orm import Session
 from app.database import get_db
 from typing import Annotated, List
 from ..dependencies.auth import get_current_user
-
-from app.schemas import client
+from app import models
+from app.schemas import client, user, employee
 from app.service.crud import userservice, clientservice
 from app.service import passwordservice
+from ..dependencies.get_404 import get_client_or_404
 
 router = APIRouter()
 
@@ -14,33 +15,35 @@ db_dependency = Annotated[Session, Depends(get_db)]
 user_dependency = Annotated[dict, Depends(get_current_user)]
 
 
-@router.post("", status_code=status.HTTP_201_CREATED)
-async def create_client(db: db_dependency, employee_role: user_dependency, create_client_request: client.ClientCreate):
+@router.get("/information/{makh}", status_code= status.HTTP_200_OK, response_model= client.ClientOut)
+def get_client_by_makh(employee_role: user_dependency, client_get: models.Client = Depends(get_client_or_404)):
     if employee_role is None or employee_role.get('role') != "employee":
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Authentication Failed')
+    """
+    Retrieve details about a specific client.
+    """
+    return client_get
 
-    # hash the password - user.password
-    hashed_password = passwordservice.get_password_hash(create_client_request.users.password)
-    create_client_request.users.password = hashed_password
 
-    if userservice.get_by_email(db_session=db, email=create_client_request.users.email):
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail="Email address already exists",
-        )
+@router.get("/all_client", status_code=status.HTTP_200_OK,response_model=List[client.ClientOut])
+async def get_all_client(employee_role: user_dependency, db: db_dependency):
+    if employee_role is None or employee_role.get('role') != "employee":
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Authentication Failed')
+    all_client = clientservice.get_multiple(db_session=db)
+    return all_client
 
-    if userservice.get_by_username(db_session=db, username=create_client_request.users.username):
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail="username already exists",
-        )
-    if userservice.get_by_phonenumber(db_session=db, phonenumber=create_client_request.users.phonenumber):
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail="phonenumber already exists",
-        )
+@router.put("/change_password", status_code=status.HTTP_200_OK)
+async def change_password(db: db_dependency, user: user_dependency, user_change: user.UserUpdate):
+    return userservice.update_password(db_session=db, user_in=user, user_change=user_change)
 
-    user = await userservice.create(db_session=db, user_in=create_client_request.users)
-    client_create = clientservice.create(db_session=db, client_in=create_client_request.client, owner_id_get=user.id)
 
-    return {"email": user.email, "fullname": user.fullname, "makh": client_create.makh}
+
+@router.delete("/{makh}", status_code=status.HTTP_200_OK)
+async def delete_client(employee_role: user_dependency, db: db_dependency, client_delete: models.Client = Depends(get_client_or_404)):
+    if employee_role is None or employee_role.get('role') != "employee":
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Authentication Failed')
+    """
+       Delete an individual client.
+    """
+    return clientservice.delete(db_session=db, makh=client_delete.makh)
+

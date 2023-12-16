@@ -27,16 +27,18 @@ class Employee(Base):
     salary = Column(Integer, nullable=False)
     ngaybatdaucongtac = Column(DATE, nullable=False)
     ngayketthuccongtac = Column(DATE, nullable=False)
-    owner_id = Column(Integer, nullable=False)
+    owner_id = Column(Integer, ForeignKey("users.id", ondelete= "CASCADE"), nullable=False)
 
+    owner = relationship("User")
 
 class Client(Base):
     __tablename__ = "client"
 
     makh = Column(Integer, primary_key=True, nullable=False)
     address = Column(String(255))
-    owner_id = Column(Integer, nullable=False)
+    owner_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
 
+    owner = relationship("User")
 
 class Event(Base):
     __tablename__ = "event"
@@ -46,8 +48,9 @@ class Event(Base):
     detail = Column(String(100))
     ngaybatdau = Column(DATE, nullable=False)
     ngayketthuc = Column(DATE, nullable=False)
-    owner = Column(Integer, nullable=False)
+    owner = Column(Integer,ForeignKey("client.makh", ondelete="CASCADE"), nullable=False)
 
+    owner_event = relationship("Client")
 
 class DetailEvent(Base):
     __tablename__ = "detail_event"
