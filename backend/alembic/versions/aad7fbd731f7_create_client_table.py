@@ -20,19 +20,14 @@ depends_on: Union[str, Sequence[str], None] = None
 
 def upgrade() -> None:
     op.create_table('client',
-                    sa.Column("makh", sa.Integer(), nullable=False),
-                    sa.Column("full_name", sa.String(255), nullable=False),
-                    sa.Column("email", sa.String(255), nullable=False, unique=True),
-                    sa.Column("username", sa.String(255), nullable=False),
-                    sa.Column("password", sa.String(255), nullable=False),
-                    sa.Column("gender", sa.Boolean, nullable=False),
-                    sa.Column("dateofbirth", sa.DATE, nullable=False),
+                    sa.Column("makh", sa.String(), nullable=False),
                     sa.Column("address", sa.String()),
-                    sa.Column("phonenumber", sa.String(20), nullable=False, unique=True),
-                    sa.Column('created_at', sa.TIMESTAMP(timezone=True), nullable=False,
-                              server_default=sa.text('now()')),
-                    sa.Column("is_active", sa.Boolean, default=False),
-                    sa.PrimaryKeyConstraint("makh"))
+                    sa.Column('owner_id', sa.Integer(), nullable=False),
+                    sa.PrimaryKeyConstraint('makh'))
+    op.create_foreign_key('client_fk', source_table="client", referent_table="users",
+                          local_cols=['owner_id'], remote_cols=['id'], ondelete="CASCADE")
+
 
 def downgrade() -> None:
+    op.drop_constraint('client_fk', table_name="client")
     op.drop_table('client')

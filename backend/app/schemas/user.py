@@ -1,16 +1,22 @@
 from pydantic import BaseModel, EmailStr
-from datetime import datetime
+from datetime import datetime, date
 from typing import Optional
 
 
 class UserBase(BaseModel):
+    email: Optional[EmailStr] = None
+    fullname: Optional[str]
     username: str
     password: str
-    email: Optional[EmailStr] = None
+    gender : Optional[bool]
+    dateofbirth : Optional[date] = "2023-12-23"
+    phonenumber : Optional[str]
     role: Optional[str] = None
     is_active: Optional[bool] = True
 
+
 class UserOut(BaseModel):
+    id: int
     username: str
     email: Optional[EmailStr] = None
     is_active: Optional[bool] = True

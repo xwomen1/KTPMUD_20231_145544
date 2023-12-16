@@ -1,39 +1,35 @@
 from pydantic import BaseModel, EmailStr
-from datetime import datetime
+from datetime import date
 from typing import Optional
+from .client import ClientOutEvent
 
 
 # Shared properties
 class EventBase(BaseModel):
-    title: Optional[str] = None
-    description: Optional[str] = None
+    mact: Optional[str] = None
+    name: Optional[str] = None
+    ngaybatdau: Optional[date]
+    ngayketthuc: Optional[date]
 
 
-# Properties to receive on item creation
-class ItemCreate(ItemBase):
-    title: str
-
-
-# Properties to receive on item update
-class ItemUpdate(ItemBase):
-    pass
-
-
-# Properties shared by models stored in DB
-class ItemInDBBase(ItemBase):
-    id: int
-    title: str
-    owner_id: int
+class EventCreate(EventBase):
+    owner: Optional[str] = "KH0001"
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
+class EventInDB(EventBase):
+    detail: str
 
-# Properties to return to client
-class Item(ItemInDBBase):
-    pass
+class EventUpdate(BaseModel):
+    name: str
+    ngaybatdau: date
+    ngayketthuc: date
+    detail: str
 
-
-# Properties properties stored in DB
-class ItemInDB(ItemInDBBase):
-    pass
+class EventOut(BaseModel):
+    mact: str
+    name: str
+    ngaybatdau: date
+    ngayketthuc: date
+    owner_event: ClientOutEvent

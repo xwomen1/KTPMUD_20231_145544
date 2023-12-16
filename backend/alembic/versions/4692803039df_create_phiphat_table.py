@@ -22,10 +22,11 @@ def upgrade() -> None:
     op.create_table("phiphat",
                     sa.Column("id", sa.Integer(), nullable=False),
                     sa.Column("phiphat", sa.Integer()),
-                    sa.Column("mahopdong", sa.String(50), nullable=False),
+                    sa.Column("lydo", sa.String(), nullable=False),
+                    sa.Column("owner_detail", sa.Integer(), nullable=False),
                     sa.PrimaryKeyConstraint("id"))
-    op.create_foreign_key('phiphat_fk', source_table="phiphat", referent_table="contract",
-                          local_cols=['mahopdong'], remote_cols=['mahopdong'], ondelete="CASCADE")
+    op.create_foreign_key('phiphat_fk', source_table="phiphat", referent_table="detail_event",
+                          local_cols=['owner_detail'], remote_cols=['id'], ondelete="CASCADE")
 
 def downgrade() -> None:
     op.drop_constraint("phiphat_fk","phiphat")
