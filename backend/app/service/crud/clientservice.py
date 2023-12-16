@@ -1,47 +1,37 @@
-from typing import List, Optional
-from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
 
-from app.models import Client
-from app.schemas.client import ClientBase, ClientOut
-from app.service.passwordservice import get_password_hash, verify_password
+from app import models
+from app.schemas.client import ClientBase, ClientOut, ClientUpdate
 
-def get(db_session: Session, makh: str) -> Optional[ClientOut]:
-    return db_session.query(Client).filter(Client.makh == makh).first()
+def get(db_session: Session, makh: str):
+    return db_session.query(models.Client).filter(models.Client.makh == makh).first()
 
 
 def get_multiple(
     db_session: Session, *, offset: int = 0, limit: int = 100
-) -> List[Client]:
-    return db_session.query(Client).offset(offset).limit(limit).all()
+):
+    return db_session.query(models.Client).offset(offset).limit(limit).all()
 
 
 def create(db_session: Session, client_in: ClientBase, owner_id_get: int):
-    db_obj = Client(**client_in.model_dump(), owner_id=owner_id_get)
+    db_obj = models.Client(**client_in.model_dump(), owner_id=owner_id_get)
     db_session.add(db_obj)
     db_session.commit()
     db_session.refresh(db_obj)
     return db_obj
 
 
-# def update(db_session: Session, user_in: User, user_change: UserUpdate):
-#
-#     if user_in is None:
-#         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Authentication Failed')
-#
-#     user_model = db_session.query(User).filter(User.id == user_in.get('id')).first()
-#     if not verify_password(user_change.password, user_model.password):
-#         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Error on changed password')
-#
-#     user_model.password = get_password_hash(user_change.new_password)
-#
-#     db_session.add(user_model)
-#     db_session.commit()
-#     db_session.refresh(user_model)
-#
-#     return "Update password success"
-#
-# def delete(db_session: Session, id_: int):
-#     db_session.query(User).filter(User.id == id_).delete()
-#     db_session.commit()
-#     return "Delete user id = {id} success".format(id=id_)
+def update(db_session: Session, client_update: ClientUpdate, makh: str):
+    client_query = db_session.query(models.Client).filter(models.Client.makh == makh)
+
+    client_query.update(client_update.model_dump(), synchronize_session=False)
+    db_session.commit()
+
+    return client_query.first()
+
+
+def delete(db_session: Session, makh: str):
+    client = get(db_session=db_session, makh=makh)
+    db_session.query(models.User).filter(models.User.id == client.owner_id).delete()
+    db_session.commit()
+    return "Delete client makh = {makh} success".format(makh=makh)
