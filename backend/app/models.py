@@ -68,13 +68,13 @@ class DetailEvent(Base):
 class HopDong(Base):
     __tablename__ = "contract"
 
-    mahopdong = Column(String(50), primary_key=True, nullable=False, unique=True)
-    giaidoan = Column(Integer, nullable=False)
+    mahopdong = Column(String(50), primary_key=True, nullable=False)
     phithanhtoan = Column(Integer,nullable=False)
     motaphi = Column(String(100))
     pt_thanhtoan = Column(String(50), nullable=False)
     ngaytttheohd = Column(DATE, nullable=False)
     ngayttthucte = Column(DATE, nullable=False)
+    giaidoan = Column(Integer, nullable=False)
 
     owner = Column(Integer, nullable=False)
 
