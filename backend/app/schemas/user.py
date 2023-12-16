@@ -14,6 +14,15 @@ class UserBase(BaseModel):
     role: Optional[str] = None
     is_active: Optional[bool] = True
 
+class UserUpdateInfo(BaseModel):
+    email: EmailStr
+    fullname: str
+    username: str
+    gender: bool
+    dateofbirth: date
+    phonenumber: str
+    is_active: Optional[bool] = True
+
 
 class UserOut(BaseModel):
     id: int
@@ -42,6 +51,8 @@ class UserInDBBase(UserBase):
 # Additional properties to return via API
 class User(UserInDBBase):
     pass
+
+
 
 
 # Additional properties stored in DB

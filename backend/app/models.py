@@ -57,13 +57,14 @@ class DetailEvent(Base):
 
     id = Column(Integer, primary_key=True, nullable=False, unique=True)
     songuoithamgia = Column(Integer, nullable=False)
-    ngaybatdau = Column(DATE, nullable=False)
-    ngayketthuc = Column(DATE, nullable=False)
+    start_date = Column(DATE, nullable=False)
+    end_date = Column(DATE, nullable=False)
     detail = Column(String)
     location = Column(String(100), nullable=False)
 
-    owner_event = Column(String(20), nullable=False)
+    owner_event = Column(String(20), ForeignKey("event.mact", ondelete="CASCADE"), nullable=False)
 
+    original = relationship("Event")
 
 class HopDong(Base):
     __tablename__ = "contract"
@@ -76,7 +77,9 @@ class HopDong(Base):
     ngayttthucte = Column(DATE, nullable=False)
     giaidoan = Column(Integer, nullable=False)
 
-    owner = Column(Integer, nullable=False)
+    owner = Column(Integer, ForeignKey("event.mact", ondelete="CASCADE"), nullable=False, unique=True)
+
+    event = relationship("Event")
 
 class PhiPhat(Base):
     __tablename__ = "phiphat"
@@ -84,4 +87,6 @@ class PhiPhat(Base):
     id = Column(Integer, primary_key=True, nullable=False)
     phiphat = Column(Integer)
     lydo = Column(String, nullable=False)
-    owner_detail = Column(String(50), nullable=False)
+    owner_detail = Column(String(50), ForeignKey("detail_event.id", ondelete="CASCADE"), nullable=False)
+
+    detail_event = relationship("DetailEvent")

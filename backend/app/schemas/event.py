@@ -33,3 +33,9 @@ class EventOut(BaseModel):
     ngaybatdau: date
     ngayketthuc: date
     owner_event: ClientOutEvent
+
+class EventOutOfDetail(BaseModel):
+    mact: str
+    name: str
+    ngaybatdau: date
+    ngayketthuc: date
