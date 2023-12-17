@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 from fastapi import Depends, HTTPException, Path, status
 from app.database import get_db
 from app import models
-from app.service.crud import userservice, employeeservice, clientservice, eventservice
+from app.service.crud import userservice, employeeservice, clientservice, eventservice, detaileventservice
 
 
 def get_user_or_404(
@@ -25,7 +25,7 @@ def get_employee_or_404(
     manv: str = Path(..., alias="manv", regex="^NV[0-9]{4}$"),
 ):
     """
-    Route dependency that retrieves a user by id or raises 404.
+    Route dependency that retrieves a employee by manv or raises 404.
     """
     employee = employeeservice.get(db_session=db_session, manv=manv)
     if not employee:
@@ -40,7 +40,7 @@ def get_client_or_404(
     makh: str = Path(..., alias="makh", regex="^KH[0-9]{4}$"),
 ):
     """
-    Route dependency that retrieves a user by id or raises 404.
+    Route dependency that retrieves a client by makh or raises 404.
     """
     client = clientservice.get(db_session=db_session, makh=makh)
     if not client:
@@ -55,7 +55,7 @@ def get_event_or_404(
     mact: str = Path(..., alias="mact"),
 ):
     """
-    Route dependency that retrieves a user by id or raises 404.
+    Route dependency that retrieves a event by mact or raises 404.
     """
     event = eventservice.get(db_session=db_session, mact=mact)
     if not event:
@@ -64,3 +64,16 @@ def get_event_or_404(
             detail="Specified event was not found.",
         )
     return event
+
+
+def get_detail_event_or_404(db_session: Session = Depends(get_db), mact: str = Path(..., alias="mact"), id: int = Path(..., alias="id", gt=0)):
+    """
+    Route dependency that retrieves a detail_event by mact and id or raises 404.
+    """
+    detail_event = detaileventservice.get(db_session=db_session, mact=mact, id=id)
+    if not detail_event:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Specified detail event was not found.",
+        )
+    return detail_event

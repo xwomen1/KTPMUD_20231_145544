@@ -5,8 +5,8 @@ from sqlalchemy.orm import Session
 
 from app.database import get_db
 from app import models
-from app.schemas import event
-from app.service.crud import eventservice
+from app.schemas import event, detail_event
+from app.service.crud import eventservice, detaileventservice
 
 from ..dependencies.auth import get_current_user
 from ..dependencies.get_404 import get_event_or_404
@@ -41,6 +41,14 @@ async def get_all_event(employee_role: user_dependency, db: db_dependency):
     all_event = eventservice.get_multiple(db_session=db)
 
     return all_event
+
+
+@router.get("/all/{mact}", status_code=status.HTTP_200_OK)
+def get_all_detail_of_event(db: db_dependency, employee_role: user_dependency, mact: str):
+    if employee_role is None or employee_role.get('role') != 'employee':
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Authentication Failed')
+
+    return detaileventservice.get_by_mact(db_session=db, owner_event=mact)
 
 
 @router.put("/{mact}", status_code=status.HTTP_204_NO_CONTENT)
