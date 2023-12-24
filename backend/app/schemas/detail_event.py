@@ -42,5 +42,9 @@ class DetailEventUpdate(BaseModel):
     end_date: date
     location: str
 
+    class Config:
+        from_attributes = True
+
+
 
 

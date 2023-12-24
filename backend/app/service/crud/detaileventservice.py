@@ -3,11 +3,11 @@ from fastapi import HTTPException, status, Path
 from sqlalchemy.orm import Session
 
 from app import models
-from app.schemas.detail_event import DetailEventCreate
+from app.schemas.detail_event import DetailEventCreate, DetailEventUpdate
 
 
-def get(db_session: Session, mact: str, id: int = Path(..., gt=0)):
-    return db_session.query(models.DetailEvent).filter(models.DetailEvent.owner_event==mact and models.DetailEvent.id==id).first()
+def get(db_session: Session, owner_event: str, id: int = Path(..., gt=0)):
+    return db_session.query(models.DetailEvent).filter(models.DetailEvent.id==id).first()
 
 
 def get_by_mact(db_session: Session, owner_event: str):
@@ -26,13 +26,13 @@ def create(db_session: Session, detail_event: DetailEventCreate):
     return db_obj
 
 
-# def update(db_session: Session, event_update: EventUpdate, mact: str):
-#     event_query = db_session.query(models.Event).filter(models.Event.mact == mact)
-#
-#     event_query.update(event_update.model_dump(), synchronize_session=False)
-#     db_session.commit()
-#
-#     return event_query.first()
+def update(db_session: Session, detail_event_update: DetailEventUpdate, id: int):
+    detail_event_query = db_session.query(models.DetailEvent).filter(models.DetailEvent.id == id)
+
+    detail_event_query.update(detail_event_update.model_dump(), synchronize_session=False)
+    db_session.commit()
+
+    return detail_event_query.first()
 
 def delete(db_session: Session, mact: str):
     db_session.query(models.Event).filter(models.Event.mact == mact).delete()

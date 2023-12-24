@@ -10,3 +10,6 @@ app = FastAPI()
 
 app.include_router(router=apirouter.router, prefix="/api")
 
+@app.get("/")
+async def test():
+    return "hello, test api"

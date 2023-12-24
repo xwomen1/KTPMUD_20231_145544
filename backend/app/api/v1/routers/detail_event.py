@@ -25,27 +25,29 @@ async def create_detail_event(db: db_dependency, employee_role: user_dependency,
     return detail_event
 
 
-@router.get("/{mact}/{id}", status_code=status.HTTP_200_OK)
+@router.get("/{id}", status_code=status.HTTP_200_OK)
 def get_detail_of_event(db: db_dependency,
                         employee_role: user_dependency,
                         detail_event_get: models.DetailEvent = Depends(get_detail_event_or_404)):
     if employee_role is None or employee_role.get('role') != 'employee':
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Authentication Failed')
 
-    return detaileventservice.get(db_session=db,mact=detail_event_get.owner_event, id=detail_event_get.id)
+    return detaileventservice.get(db_session=db, id=detail_event_get.id)
 
 
-
-
-
-@router.put("/update_info/{mact}/{id}", status_code=status.HTTP_204_NO_CONTENT)
+@router.put("/update_info/{owner_event}/{id}", status_code=status.HTTP_204_NO_CONTENT)
 async def update_detail_event(db: db_dependency,
                               employee_role: user_dependency,
-                              detail_event_get: models.DetailEvent = Depends(get_detail_event_or_404),
+                              detail_event_update: detail_event.DetailEventUpdate,
+                              detail_event_get: models.DetailEvent = Depends(get_detail_event_or_404)
                               ):
-    return 0
+    if employee_role is None or employee_role.get('role') != "employee":
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Authentication Failed')
 
-@router.delete("/update_info/{mact}/{id}", status_code=status.HTTP_204_NO_CONTENT)
+    return detaileventservice.update(db_session=db, detail_event_update=detail_event_update ,id=detail_event_get.id)
+
+
+@router.delete("/update_info/{owner_event}/{id}", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_detail_event(db: db_dependency,
                               employee_role: user_dependency,
                               detail_event_get: models.DetailEvent = Depends(get_detail_event_or_404),
