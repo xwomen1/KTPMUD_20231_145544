@@ -1,0 +1,1363 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 144rem;
+}.qun-l-s-kin-nhn-vin-mNV {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #e6e2e2;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H {
+  width: 100%;
+  height: 17.7rem;
+  position: relative;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .top-navigation-RC9 {
+  box-sizing: border-box;
+  padding: 1.4rem 13.3rem 1.2rem 13rem;
+  width: 144rem;
+  height: 4.5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #bfbcbc;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .top-navigation-RC9 .frame-8-LK7 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .top-navigation-RC9 .frame-8-LK7 .social-media-UAR {
+  margin: 0.15rem 63.1rem 0.25rem 0rem;
+  height: calc(100% - 0.4rem);
+  display: flex;
+  column-gap: 2.8rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .top-navigation-RC9 .frame-8-LK7 .social-media-UAR .fb-C6R {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .top-navigation-RC9 .frame-8-LK7 .social-media-UAR .x-umX {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .top-navigation-RC9 .frame-8-LK7 .social-media-UAR .linkedin-U3w {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .top-navigation-RC9 .frame-8-LK7 .frame-6-cR3 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .top-navigation-RC9 .frame-8-LK7 .frame-6-cR3 .contact-aMs {
+  margin-right: 3.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .top-navigation-RC9 .frame-8-LK7 .frame-6-cR3 .contact-aMs .phone-8uB {
+  margin-right: 2.4rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .top-navigation-RC9 .frame-8-LK7 .frame-6-cR3 .contact-aMs .phone-8uB .image-1-u9F {
+  margin-bottom: 0.1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .top-navigation-RC9 .frame-8-LK7 .frame-6-cR3 .contact-aMs .phone-8uB .item-84-987-654-321-cpM {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .top-navigation-RC9 .frame-8-LK7 .frame-6-cR3 .contact-aMs .mail-Weq {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .top-navigation-RC9 .frame-8-LK7 .frame-6-cR3 .contact-aMs .mail-Weq .image-2-fGq {
+  margin: 0rem 1.3rem 0.1rem 0rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .top-navigation-RC9 .frame-8-LK7 .frame-6-cR3 .contact-aMs .mail-Weq .htmlgmailcom-mqf {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .top-navigation-RC9 .frame-8-LK7 .frame-6-cR3 .login-VWm {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .top-navigation-RC9 .frame-8-LK7 .frame-6-cR3 .login-VWm .image-3-rs7 {
+  margin: 0rem 1rem 0.1rem 0rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .top-navigation-RC9 .frame-8-LK7 .frame-6-cR3 .login-VWm .user-name-mjB {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .frame-10-uaV {
+  box-sizing: border-box;
+  padding: 0rem 14.8rem 1rem 13.4rem;
+  width: 144rem;
+  height: 14.3rem;
+  position: absolute;
+  left: 0;
+  top: 3.4rem;
+  overflow: hidden;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #313131;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .frame-10-uaV .auto-group-tkaf-CZb {
+  margin: 0rem 3.5rem 2rem 0rem;
+  width: calc(100% - 3.5rem);
+  display: flex;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .frame-10-uaV .auto-group-tkaf-CZb .html-event-Lfo {
+  margin: 0rem 57.6rem 0.6rem 0rem;
+  font-size: 5rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #ffffff;
+  font-family: Notable, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .frame-10-uaV .auto-group-tkaf-CZb .frame-24-TVX {
+  width: 14.4rem;
+  height: 5.4rem;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2125;
+  color: #ffffff;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #409fc7;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .frame-10-uaV .frame-43-Yms {
+  width: 100%;
+  height: 4.2rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .frame-10-uaV .frame-43-Yms .frame-42-Jm3 {
+  margin-right: 39.3rem;
+  height: 100%;
+  display: flex;
+  column-gap: 2.1rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .frame-10-uaV .frame-43-Yms .frame-42-Jm3 .trang-ch-QZB {
+  width: 11.4rem;
+  height: 100%;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .frame-10-uaV .frame-43-Yms .frame-42-Jm3 .khch-hng-JPf {
+  width: 14.5rem;
+  height: 100%;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .frame-10-uaV .frame-43-Yms .frame-42-Jm3 .s-kin-87o {
+  width: 11.4rem;
+  height: 100%;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #ffffff;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #409fc7;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .frame-10-uaV .frame-43-Yms .frame-42-Jm3 .hp-ng-dKT {
+  width: 11.4rem;
+  height: 100%;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-hbej-58H .frame-10-uaV .frame-43-Yms .h-s-c-nhn-vpM {
+  width: 21.5rem;
+  height: 100%;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH {
+  box-sizing: border-box;
+  padding: 2rem 13.3rem 0rem 15.7rem;
+  width: 100%;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-25-7dw {
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 50.3rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: rgba(0, 0, 0, 0.2099999934);
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 {
+  margin-right: 2.5rem;
+  width: 112.5rem;
+  overflow: hidden;
+  position: relative;
+  row-gap: 5.9rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 {
+  width: 100%;
+  height: 47rem;
+  display: flex;
+  column-gap: 8.1rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-4hb {
+  width: 32.1rem;
+  height: 100%;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-4hb .nn-pAy {
+  box-sizing: border-box;
+  padding: 2.3rem 1.6rem 2rem 1.6rem;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-4hb .nn-pAy .nh-kKX {
+  margin-bottom: 1rem;
+  width: 28.9rem;
+  height: 28.3rem;
+  object-fit: cover;
+  vertical-align: top;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-4hb .nn-pAy .ghi-ch-rtM {
+  margin-left: 1rem;
+  width: 27.3rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-4hb .nn-pAy .ghi-ch-rtM .auto-group-pkcb-LHj {
+  margin-bottom: 1.9rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-4hb .nn-pAy .ghi-ch-rtM .auto-group-pkcb-LHj .tn-s-kin-gsP {
+  margin-right: 4.4rem;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-4hb .nn-pAy .ghi-ch-rtM .auto-group-pkcb-LHj .id-ch-s-kin-cFF {
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-4hb .nn-pAy .ghi-ch-rtM .thi-gian-1-1-23-1-1-24-x4D {
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-4hb .nn-pAy .ghi-ch-rtM .a-im-khch-sn-abc-5ed {
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-4hb .nn-pAy .ghi-ch-rtM .s-ngi-tham-d-1000-QB7 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-guK {
+  width: 32.1rem;
+  height: 100%;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-guK .nn-e5T {
+  box-sizing: border-box;
+  padding: 2.3rem 1.6rem 2rem 1.6rem;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-guK .nn-e5T .nh-BLH {
+  margin-bottom: 1rem;
+  width: 28.9rem;
+  height: 28.3rem;
+  object-fit: cover;
+  vertical-align: top;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-guK .nn-e5T .ghi-ch-WtM {
+  margin-left: 1rem;
+  width: 27.3rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-guK .nn-e5T .ghi-ch-WtM .auto-group-mawo-U4V {
+  margin-bottom: 1.9rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-guK .nn-e5T .ghi-ch-WtM .auto-group-mawo-U4V .tn-s-kin-261 {
+  margin-right: 4.4rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-guK .nn-e5T .ghi-ch-WtM .auto-group-mawo-U4V .id-ch-s-kin-WWy {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-guK .nn-e5T .ghi-ch-WtM .thi-gian-1-1-23-1-1-24-FUZ {
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-guK .nn-e5T .ghi-ch-WtM .a-im-khch-sn-abc-wMP {
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-guK .nn-e5T .ghi-ch-WtM .s-ngi-tham-d-1000-dzu {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-vDK {
+  width: 32.1rem;
+  height: 100%;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-vDK .nn-Tyw {
+  box-sizing: border-box;
+  padding: 2.3rem 1.6rem 2rem 1.6rem;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-vDK .nn-Tyw .nh-PMo {
+  margin-bottom: 1rem;
+  width: 28.9rem;
+  height: 28.3rem;
+  object-fit: cover;
+  vertical-align: top;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-vDK .nn-Tyw .ghi-ch-72u {
+  margin-left: 1rem;
+  width: 27.3rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-vDK .nn-Tyw .ghi-ch-72u .auto-group-xbwh-TcZ {
+  margin-bottom: 1.9rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-vDK .nn-Tyw .ghi-ch-72u .auto-group-xbwh-TcZ .tn-s-kin-1ty {
+  margin-right: 4.4rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-vDK .nn-Tyw .ghi-ch-72u .auto-group-xbwh-TcZ .id-ch-s-kin-MT3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-vDK .nn-Tyw .ghi-ch-72u .thi-gian-1-1-23-1-1-24-swB {
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-vDK .nn-Tyw .ghi-ch-72u .a-im-khch-sn-abc-ctm {
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-44-Yz9 .card-s-kin-nhn-vin-vDK .nn-Tyw .ghi-ch-72u .s-ngi-tham-d-1000-kk5 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH {
+  width: 100%;
+  height: 47rem;
+  display: flex;
+  column-gap: 8.1rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-y73 {
+  width: 32.1rem;
+  height: 100%;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-y73 .nn-KRo {
+  box-sizing: border-box;
+  padding: 2.3rem 1.6rem 2rem 1.6rem;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-y73 .nn-KRo .nh-RUq {
+  margin-bottom: 1rem;
+  width: 28.9rem;
+  height: 28.3rem;
+  object-fit: cover;
+  vertical-align: top;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-y73 .nn-KRo .ghi-ch-Zb3 {
+  margin-left: 1rem;
+  width: 27.3rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-y73 .nn-KRo .ghi-ch-Zb3 .auto-group-qzef-uuo {
+  margin-bottom: 1.9rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-y73 .nn-KRo .ghi-ch-Zb3 .auto-group-qzef-uuo .tn-s-kin-qoT {
+  margin-right: 4.4rem;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-y73 .nn-KRo .ghi-ch-Zb3 .auto-group-qzef-uuo .id-ch-s-kin-NYV {
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-y73 .nn-KRo .ghi-ch-Zb3 .thi-gian-1-1-23-1-1-24-7W5 {
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-y73 .nn-KRo .ghi-ch-Zb3 .a-im-khch-sn-abc-QEH {
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-y73 .nn-KRo .ghi-ch-Zb3 .s-ngi-tham-d-1000-LNq {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-Fkh {
+  width: 32.1rem;
+  height: 100%;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-Fkh .nn-Qdb {
+  box-sizing: border-box;
+  padding: 2.3rem 1.6rem 2rem 1.6rem;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-Fkh .nn-Qdb .nh-vbw {
+  margin-bottom: 1rem;
+  width: 28.9rem;
+  height: 28.3rem;
+  object-fit: cover;
+  vertical-align: top;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-Fkh .nn-Qdb .ghi-ch-U7f {
+  margin-left: 1rem;
+  width: 27.3rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-Fkh .nn-Qdb .ghi-ch-U7f .auto-group-v3md-29B {
+  margin-bottom: 1.9rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-Fkh .nn-Qdb .ghi-ch-U7f .auto-group-v3md-29B .tn-s-kin-BGy {
+  margin-right: 4.4rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-Fkh .nn-Qdb .ghi-ch-U7f .auto-group-v3md-29B .id-ch-s-kin-Ke5 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-Fkh .nn-Qdb .ghi-ch-U7f .thi-gian-1-1-23-1-1-24-4rZ {
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-Fkh .nn-Qdb .ghi-ch-U7f .a-im-khch-sn-abc-1Wu {
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-Fkh .nn-Qdb .ghi-ch-U7f .s-ngi-tham-d-1000-iAR {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-1QR {
+  width: 32.1rem;
+  height: 100%;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-1QR .nn-ZRw {
+  box-sizing: border-box;
+  padding: 2.3rem 1.6rem 2rem 1.6rem;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-1QR .nn-ZRw .nh-W6H {
+  margin-bottom: 1rem;
+  width: 28.9rem;
+  height: 28.3rem;
+  object-fit: cover;
+  vertical-align: top;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-1QR .nn-ZRw .ghi-ch-eTP {
+  margin-left: 1rem;
+  width: 27.3rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-1QR .nn-ZRw .ghi-ch-eTP .auto-group-mgfv-QBf {
+  margin-bottom: 1.9rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-1QR .nn-ZRw .ghi-ch-eTP .auto-group-mgfv-QBf .tn-s-kin-jUq {
+  margin-right: 4.4rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-1QR .nn-ZRw .ghi-ch-eTP .auto-group-mgfv-QBf .id-ch-s-kin-5Ho {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-1QR .nn-ZRw .ghi-ch-eTP .thi-gian-1-1-23-1-1-24-oDo {
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-1QR .nn-ZRw .ghi-ch-eTP .a-im-khch-sn-abc-jdF {
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-91-3UH .card-s-kin-nhn-vin-1QR .nn-ZRw .ghi-ch-eTP .s-ngi-tham-d-1000-Tp9 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD {
+  width: 100%;
+  height: 47rem;
+  display: flex;
+  column-gap: 8.1rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-VVw {
+  width: 32.1rem;
+  height: 100%;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-VVw .nn-Qso {
+  box-sizing: border-box;
+  padding: 2.3rem 1.6rem 2rem 1.6rem;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-VVw .nn-Qso .nh-9Kb {
+  margin-bottom: 1rem;
+  width: 28.9rem;
+  height: 28.3rem;
+  object-fit: cover;
+  vertical-align: top;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-VVw .nn-Qso .ghi-ch-Hgh {
+  margin-left: 1rem;
+  width: 27.3rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-VVw .nn-Qso .ghi-ch-Hgh .auto-group-vgou-3Qy {
+  margin-bottom: 1.9rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-VVw .nn-Qso .ghi-ch-Hgh .auto-group-vgou-3Qy .tn-s-kin-CYm {
+  margin-right: 4.4rem;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-VVw .nn-Qso .ghi-ch-Hgh .auto-group-vgou-3Qy .id-ch-s-kin-Xqw {
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-VVw .nn-Qso .ghi-ch-Hgh .thi-gian-1-1-23-1-1-24-5Mf {
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-VVw .nn-Qso .ghi-ch-Hgh .a-im-khch-sn-abc-UPo {
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-VVw .nn-Qso .ghi-ch-Hgh .s-ngi-tham-d-1000-C4u {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-5eV {
+  width: 32.1rem;
+  height: 100%;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-5eV .nn-Qgm {
+  box-sizing: border-box;
+  padding: 2.3rem 1.6rem 2rem 1.6rem;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-5eV .nn-Qgm .nh-utR {
+  margin-bottom: 1rem;
+  width: 28.9rem;
+  height: 28.3rem;
+  object-fit: cover;
+  vertical-align: top;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-5eV .nn-Qgm .ghi-ch-rYm {
+  margin-left: 1rem;
+  width: 27.3rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-5eV .nn-Qgm .ghi-ch-rYm .auto-group-mjnb-C6q {
+  margin-bottom: 1.9rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-5eV .nn-Qgm .ghi-ch-rYm .auto-group-mjnb-C6q .tn-s-kin-Lyj {
+  margin-right: 4.4rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-5eV .nn-Qgm .ghi-ch-rYm .auto-group-mjnb-C6q .id-ch-s-kin-dxq {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-5eV .nn-Qgm .ghi-ch-rYm .thi-gian-1-1-23-1-1-24-NfX {
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-5eV .nn-Qgm .ghi-ch-rYm .a-im-khch-sn-abc-5pq {
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-5eV .nn-Qgm .ghi-ch-rYm .s-ngi-tham-d-1000-pXX {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-jeV {
+  width: 32.1rem;
+  height: 100%;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-jeV .nn-GPX {
+  box-sizing: border-box;
+  padding: 2.3rem 1.6rem 2rem 1.6rem;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-jeV .nn-GPX .nh-oeM {
+  margin-bottom: 1rem;
+  width: 28.9rem;
+  height: 28.3rem;
+  object-fit: cover;
+  vertical-align: top;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-jeV .nn-GPX .ghi-ch-8Aq {
+  margin-left: 1rem;
+  width: 27.3rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-jeV .nn-GPX .ghi-ch-8Aq .auto-group-ybeb-gCM {
+  margin-bottom: 1.9rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-jeV .nn-GPX .ghi-ch-8Aq .auto-group-ybeb-gCM .tn-s-kin-cLu {
+  margin-right: 4.4rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-jeV .nn-GPX .ghi-ch-8Aq .auto-group-ybeb-gCM .id-ch-s-kin-we5 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-jeV .nn-GPX .ghi-ch-8Aq .thi-gian-1-1-23-1-1-24-Hhw {
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-jeV .nn-GPX .ghi-ch-8Aq .a-im-khch-sn-abc-byX {
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-92-NgD .card-s-kin-nhn-vin-jeV .nn-GPX .ghi-ch-8Aq .s-ngi-tham-d-1000-jpq {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM {
+  width: 100%;
+  height: 47rem;
+  display: flex;
+  column-gap: 8.1rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-Bwj {
+  width: 32.1rem;
+  height: 100%;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-Bwj .nn-9Nm {
+  box-sizing: border-box;
+  padding: 2.3rem 1.6rem 2rem 1.6rem;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-Bwj .nn-9Nm .nh-gdb {
+  margin-bottom: 1rem;
+  width: 28.9rem;
+  height: 28.3rem;
+  object-fit: cover;
+  vertical-align: top;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-Bwj .nn-9Nm .ghi-ch-BaM {
+  margin-left: 1rem;
+  width: 27.3rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-Bwj .nn-9Nm .ghi-ch-BaM .auto-group-ibhu-Wcd {
+  margin-bottom: 1.9rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-Bwj .nn-9Nm .ghi-ch-BaM .auto-group-ibhu-Wcd .tn-s-kin-Gbo {
+  margin-right: 4.4rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-Bwj .nn-9Nm .ghi-ch-BaM .auto-group-ibhu-Wcd .id-ch-s-kin-ord {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-Bwj .nn-9Nm .ghi-ch-BaM .thi-gian-1-1-23-1-1-24-Z57 {
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-Bwj .nn-9Nm .ghi-ch-BaM .a-im-khch-sn-abc-hBK {
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-Bwj .nn-9Nm .ghi-ch-BaM .s-ngi-tham-d-1000-dKs {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-j81 {
+  width: 32.1rem;
+  height: 100%;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-j81 .nn-Gtd {
+  box-sizing: border-box;
+  padding: 2.3rem 1.6rem 2rem 1.6rem;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-j81 .nn-Gtd .nh-p9T {
+  margin-bottom: 1rem;
+  width: 28.9rem;
+  height: 28.3rem;
+  object-fit: cover;
+  vertical-align: top;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-j81 .nn-Gtd .ghi-ch-MfB {
+  margin-left: 1rem;
+  width: 27.3rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-j81 .nn-Gtd .ghi-ch-MfB .auto-group-ergw-7PT {
+  margin-bottom: 1.9rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-j81 .nn-Gtd .ghi-ch-MfB .auto-group-ergw-7PT .tn-s-kin-p2y {
+  margin-right: 4.4rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-j81 .nn-Gtd .ghi-ch-MfB .auto-group-ergw-7PT .id-ch-s-kin-x9B {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-j81 .nn-Gtd .ghi-ch-MfB .thi-gian-1-1-23-1-1-24-4xu {
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-j81 .nn-Gtd .ghi-ch-MfB .a-im-khch-sn-abc-Qms {
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-j81 .nn-Gtd .ghi-ch-MfB .s-ngi-tham-d-1000-9UZ {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-4rR {
+  width: 32.1rem;
+  height: 100%;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-4rR .nn-22Z {
+  box-sizing: border-box;
+  padding: 2.3rem 1.6rem 2rem 1.6rem;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-4rR .nn-22Z .nh-MqX {
+  margin-bottom: 1rem;
+  width: 28.9rem;
+  height: 28.3rem;
+  object-fit: cover;
+  vertical-align: top;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-4rR .nn-22Z .ghi-ch-t4m {
+  margin-left: 1rem;
+  width: 27.3rem;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-4rR .nn-22Z .ghi-ch-t4m .auto-group-3soq-cFf {
+  margin-bottom: 1.9rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-4rR .nn-22Z .ghi-ch-t4m .auto-group-3soq-cFf .tn-s-kin-AY5 {
+  margin-right: 4.4rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-4rR .nn-22Z .ghi-ch-t4m .auto-group-3soq-cFf .id-ch-s-kin-tU5 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-4rR .nn-22Z .ghi-ch-t4m .thi-gian-1-1-23-1-1-24-q8R {
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-4rR .nn-22Z .ghi-ch-t4m .a-im-khch-sn-abc-MMf {
+  margin-bottom: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.qun-l-s-kin-nhn-vin-mNV .auto-group-19y5-BkH .frame-91-DS5 .frame-90-SUM .card-s-kin-nhn-vin-4rR .nn-22Z .ghi-ch-t4m .s-ngi-tham-d-1000-TvV {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+}

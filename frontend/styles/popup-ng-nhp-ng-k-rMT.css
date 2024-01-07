@@ -1,0 +1,191 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 66rem;
+}.popup-ng-nhp-ng-k-2D3 {
+  box-sizing: border-box;
+  padding: 2rem 8.4rem;
+  width: 100%;
+  height: 64.6rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+}
+.popup-ng-nhp-ng-k-2D3 .frame-xMb {
+  width: 100%;
+  height: 56.45rem;
+  display: flex;
+  flex-direction: column;
+}
+.popup-ng-nhp-ng-k-2D3 .frame-xMb .ng-k-qRP {
+  margin-bottom: 1.9rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.popup-ng-nhp-ng-k-2D3 .frame-xMb .tn-ng-nhp-9S5 {
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  padding: 1rem 2.5rem;
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1e1e1e;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.1rem #000000;
+  border-radius: 5rem;
+  flex-shrink: 0;
+}
+.popup-ng-nhp-ng-k-2D3 .frame-xMb .tn-ng-nhp-EyK {
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  padding: 1rem 2.5rem;
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1e1e1e;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.1rem #000000;
+  border-radius: 5rem;
+  flex-shrink: 0;
+}
+.popup-ng-nhp-ng-k-2D3 .frame-xMb .tn-ng-nhp-wsj {
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  padding: 1rem 2.5rem;
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1e1e1e;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.1rem #000000;
+  border-radius: 5rem;
+  flex-shrink: 0;
+}
+.popup-ng-nhp-ng-k-2D3 .frame-xMb .tn-ng-nhp-Pjj {
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  padding: 1rem 2.5rem;
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1e1e1e;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.1rem #000000;
+  border-radius: 5rem;
+  flex-shrink: 0;
+}
+.popup-ng-nhp-ng-k-2D3 .frame-xMb .tn-ng-nhp-twP {
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  padding: 1rem 2.5rem;
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1e1e1e;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.1rem #000000;
+  border-radius: 5rem;
+  flex-shrink: 0;
+}
+.popup-ng-nhp-ng-k-2D3 .frame-xMb .tn-ng-nhp-n1B {
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+  padding: 1rem 2.5rem;
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1e1e1e;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.1rem #000000;
+  border-radius: 5rem;
+  flex-shrink: 0;
+}
+.popup-ng-nhp-ng-k-2D3 .frame-xMb .tn-ng-nhp-GBF {
+  margin-bottom: 2.45rem;
+  box-sizing: border-box;
+  padding: 1rem 2.5rem;
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1e1e1e;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.1rem #000000;
+  border-radius: 5rem;
+  flex-shrink: 0;
+}
+.popup-ng-nhp-ng-k-2D3 .frame-xMb .frame-23-jqX {
+  margin-right: 7.4rem;
+  width: calc(100% - 7.4rem);
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.popup-ng-nhp-ng-k-2D3 .frame-xMb .frame-23-jqX .frame-22-H6M {
+  margin-right: 6.6rem;
+  width: 10.8rem;
+  height: 100%;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2125;
+  color: #000000;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1df40;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+.popup-ng-nhp-ng-k-2D3 .frame-xMb .frame-23-jqX .c-ti-khon-ng-nhp-n37 {
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.2125;
+  color: #bfbcbc;
+  font-family: Inter, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: baseline;
+  flex-shrink: 0;
+}
+.popup-ng-nhp-ng-k-2D3 .frame-xMb .frame-23-jqX .c-ti-khon-ng-nhp-n37 .c-ti-khon-ng-nhp-n37-sub-0 {
+}
+.popup-ng-nhp-ng-k-2D3 .frame-xMb .frame-23-jqX .c-ti-khon-ng-nhp-n37 .c-ti-khon-ng-nhp-n37-sub-1 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.2125;
+  color: #1e1e1e;
+  font-family: Inter, 'Source Sans Pro';
+}
