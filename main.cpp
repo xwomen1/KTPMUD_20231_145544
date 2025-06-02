@@ -450,14 +450,14 @@ void from_json(const json& j, Location& l) {
 
 double Haversine(double lat1, double lon1, double lat2, double lon2) {
     const double R = 6371e3; // bán kính Trái đất (m)
-    double φ1 = lat1 * M_PI / 180;
-    double φ2 = lat2 * M_PI / 180;
-    double Δφ = (lat2 - lat1) * M_PI / 180;
-    double Δλ = (lon2 - lon1) * M_PI / 180;
+    double phi1 = lat1 * M_PI / 180;
+    double phi2 = lat2 * M_PI / 180;
+    double deltaphi = (lat2 - lat1) * M_PI / 180;
+    double deltalamda = (lon2 - lon1) * M_PI / 180;
 
-    double a = std::sin(Δφ/2) * std::sin(Δφ/2) +
-               std::cos(φ1) * std::cos(φ2) *
-               std::sin(Δλ/2) * std::sin(Δλ/2);
+    double a = std::sin(deltaphi/2) * std::sin(deltaphi/2) +
+               std::cos(phi1) * std::cos(phi2) *
+               std::sin(deltalamda/2) * std::sin(deltalamda/2);
     double c = 2 * std::atan2(std::sqrt(a), std::sqrt(1-a));
 
     return R * c; // khoảng cách (mét)
