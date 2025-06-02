@@ -1,0 +1,32 @@
+[
+    {
+        "balance": 70000.0,
+        "faculty": "ET2",
+        "id": "20213982",
+        "licensePlate": "19-D1 15318",
+        "name": "Đỗ Thùy Linh",
+        "transactions": [
+            "2025-05-29 08:20:09 - Nạp tiền: +20000.000000 VND",
+            "2025-05-29 09:11:34 - Nạp tiền: +50000.000000 VND"
+        ]
+    },
+    {
+        "balance": 70000.0,
+        "faculty": "ET2",
+        "id": "20213719",
+        "licensePlate": "37-D1 15318",
+        "name": "Lê Trung Hiếu",
+        "transactions": [
+            "2025-05-29 08:20:09 - Nạp tiền: +20000.000000 VND",
+            "2025-05-29 09:11:34 - Nạp tiền: +50000.000000 VND"
+        ]
+    },
+    {
+        "balance": 0.0,
+        "faculty": "ĐTVT",
+        "id": "20224167",
+        "licensePlate": "20D1-11106",
+        "name": "Nguyễn Thị Huyền Trang",
+        "transactions": []
+    }
+]

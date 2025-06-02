@@ -1,0 +1,1610 @@
+[
+  {
+    "parkingLot": "Nha xe D9",
+    "studentId": "20213982",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-29 06:15:00",
+    "exitTime": "2025-05-29 08:00:00",
+    "fee": 500000.0
+  },
+  {
+    "parkingLot": "Nha xe D4-6",
+    "studentId": "20210662",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-04 17:48:00",
+    "exitTime": "2025-05-04 20:30:00",
+    "fee": 652423.52
+  },
+  {
+    "parkingLot": "Nha xe D4-6",
+    "studentId": "20210696",
+    "licensePlate": "99B-88888",
+    "entryTime": "2025-05-24 07:39:00",
+    "exitTime": "2025-05-24 09:32:00",
+    "fee": 238871.77
+  },
+  {
+    "parkingLot": "Nha xe C7",
+    "studentId": "20210996",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-06 08:24:00",
+    "exitTime": "2025-05-06 11:23:00",
+    "fee": 804750.45
+  },
+  {
+    "parkingLot": "Nha xe D4-6",
+    "studentId": "20210758",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-20 07:49:00",
+    "exitTime": "2025-05-20 10:38:00",
+    "fee": 150520.33
+  },
+  {
+    "parkingLot": "Nha xe B6",
+    "studentId": "20210390",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-24 15:42:00",
+    "exitTime": "2025-05-24 16:36:00",
+    "fee": 1486663.54
+  },
+  {
+    "parkingLot": "Nha xe B6",
+    "studentId": "20210380",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-14 11:26:00",
+    "exitTime": "2025-05-14 14:04:00",
+    "fee": 699368.18
+  },
+  {
+    "parkingLot": "Nha xe D3-5",
+    "studentId": "20210443",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-20 15:21:00",
+    "exitTime": "2025-05-20 17:37:00",
+    "fee": 331871.33
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210845",
+    "licensePlate": "20D1-11106",
+    "entryTime": "2025-05-22 17:00:00",
+    "exitTime": "2025-05-22 19:13:00",
+    "fee": 300115.08
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20210152",
+    "licensePlate": "20D1-11106",
+    "entryTime": "2025-05-10 19:51:00",
+    "exitTime": "2025-05-10 21:00:00",
+    "fee": 557682.68
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210716",
+    "licensePlate": "20D1-11106",
+    "entryTime": "2025-05-15 16:57:00",
+    "exitTime": "2025-05-15 18:38:00",
+    "fee": 285525.86
+  },
+  {
+    "parkingLot": "Nha xe B6",
+    "studentId": "20210941",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-15 18:01:00",
+    "exitTime": "2025-05-15 19:13:00",
+    "fee": 959326.16
+  },
+  {
+    "parkingLot": "Nha xe B1",
+    "studentId": "20210267",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-08 12:03:00",
+    "exitTime": "2025-05-08 14:47:00",
+    "fee": 362863.59
+  },
+  {
+    "parkingLot": "Nha xe D3-5",
+    "studentId": "20210178",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-05 21:09:00",
+    "exitTime": "2025-05-05 22:51:00",
+    "fee": 743367.76
+  },
+  {
+    "parkingLot": "Nha xe C7",
+    "studentId": "20210239",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-23 10:36:00",
+    "exitTime": "2025-05-23 12:17:00",
+    "fee": 263496.45
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20210365",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-24 13:49:00",
+    "exitTime": "2025-05-24 15:15:00",
+    "fee": 910603.94
+  },
+  {
+    "parkingLot": "Nha xe B6",
+    "studentId": "20210131",
+    "licensePlate": "20D1-11106",
+    "entryTime": "2025-05-26 08:28:00",
+    "exitTime": "2025-05-26 10:28:00",
+    "fee": 231074.71
+  },
+  {
+    "parkingLot": "Nha xe D9",
+    "studentId": "20210394",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-03 09:15:00",
+    "exitTime": "2025-05-03 11:43:00",
+    "fee": 732597.41
+  },
+  {
+    "parkingLot": "Nha xe B6",
+    "studentId": "20210018",
+    "licensePlate": "99B-88888",
+    "entryTime": "2025-05-22 12:05:00",
+    "exitTime": "2025-05-22 13:46:00",
+    "fee": 1219842.84
+  },
+  {
+    "parkingLot": "Nha xe D4-6",
+    "studentId": "20210311",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-14 20:48:00",
+    "exitTime": "2025-05-14 22:01:00",
+    "fee": 798830.72
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210802",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-09 17:23:00",
+    "exitTime": "2025-05-09 19:45:00",
+    "fee": 1030566.37
+  },
+  {
+    "parkingLot": "Nha xe D9",
+    "studentId": "20210497",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-16 20:04:00",
+    "exitTime": "2025-05-16 22:32:00",
+    "fee": 616735.67
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20210083",
+    "licensePlate": "99B-88888",
+    "entryTime": "2025-05-24 06:38:00",
+    "exitTime": "2025-05-24 07:42:00",
+    "fee": 1121960.28
+  },
+  {
+    "parkingLot": "Nha xe B1",
+    "studentId": "20210508",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-09 11:11:00",
+    "exitTime": "2025-05-09 12:57:00",
+    "fee": 1384167.01
+  },
+  {
+    "parkingLot": "Nha xe D3-5",
+    "studentId": "20210996",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-25 19:40:00",
+    "exitTime": "2025-05-25 20:30:00",
+    "fee": 1316257.29
+  },
+  {
+    "parkingLot": "Nha xe TC",
+    "studentId": "20210982",
+    "licensePlate": "99B-88888",
+    "entryTime": "2025-05-27 21:56:00",
+    "exitTime": "2025-05-28 00:03:00",
+    "fee": 459955.44
+  },
+  {
+    "parkingLot": "Nha xe D9",
+    "studentId": "20210825",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-12 07:50:00",
+    "exitTime": "2025-05-12 08:31:00",
+    "fee": 685000.86
+  },
+  {
+    "parkingLot": "Nha xe C7",
+    "studentId": "20210925",
+    "licensePlate": "20D1-11106",
+    "entryTime": "2025-05-17 12:14:00",
+    "exitTime": "2025-05-17 13:23:00",
+    "fee": 1139271.14
+  },
+  {
+    "parkingLot": "Nha xe C7",
+    "studentId": "20210346",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-26 06:53:00",
+    "exitTime": "2025-05-26 08:40:00",
+    "fee": 460253.75
+  },
+  {
+    "parkingLot": "Nha xe TC",
+    "studentId": "20210770",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-23 21:40:00",
+    "exitTime": "2025-05-24 00:07:00",
+    "fee": 703931.14
+  },
+  {
+    "parkingLot": "Nha xe B6",
+    "studentId": "20210455",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-14 21:48:00",
+    "exitTime": "2025-05-15 00:14:00",
+    "fee": 93522.67
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210712",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-14 10:05:00",
+    "exitTime": "2025-05-14 10:47:00",
+    "fee": 144060.62
+  },
+  {
+    "parkingLot": "Nha xe TC",
+    "studentId": "20210204",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-24 19:35:00",
+    "exitTime": "2025-05-24 20:12:00",
+    "fee": 901323.67
+  },
+  {
+    "parkingLot": "Nha xe D3-5",
+    "studentId": "20210953",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-19 19:47:00",
+    "exitTime": "2025-05-19 21:34:00",
+    "fee": 221123.49
+  },
+  {
+    "parkingLot": "Nha xe TC",
+    "studentId": "20210044",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-08 20:25:00",
+    "exitTime": "2025-05-08 21:58:00",
+    "fee": 484799.52
+  },
+  {
+    "parkingLot": "Nha xe C7",
+    "studentId": "20210953",
+    "licensePlate": "20D1-11106",
+    "entryTime": "2025-05-03 10:49:00",
+    "exitTime": "2025-05-03 11:28:00",
+    "fee": 1446836.63
+  },
+  {
+    "parkingLot": "Nha xe D9",
+    "studentId": "20210259",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-22 16:23:00",
+    "exitTime": "2025-05-22 18:54:00",
+    "fee": 764298.19
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210453",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-15 18:00:00",
+    "exitTime": "2025-05-15 19:20:00",
+    "fee": 304273.32
+  },
+  {
+    "parkingLot": "Nha xe B1",
+    "studentId": "20210740",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-04 17:00:00",
+    "exitTime": "2025-05-04 19:02:00",
+    "fee": 1293944.77
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20210124",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-09 19:54:00",
+    "exitTime": "2025-05-09 22:36:00",
+    "fee": 641384.22
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210150",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-23 07:04:00",
+    "exitTime": "2025-05-23 09:52:00",
+    "fee": 165349.02
+  },
+  {
+    "parkingLot": "Nha xe D4-6",
+    "studentId": "20210542",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-13 20:16:00",
+    "exitTime": "2025-05-13 22:02:00",
+    "fee": 420382.24
+  },
+  {
+    "parkingLot": "Nha xe D3-5",
+    "studentId": "20210874",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-15 10:48:00",
+    "exitTime": "2025-05-15 11:49:00",
+    "fee": 1158282.0
+  },
+  {
+    "parkingLot": "Nha xe TC",
+    "studentId": "20210103",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-27 18:30:00",
+    "exitTime": "2025-05-27 20:51:00",
+    "fee": 523024.93
+  },
+  {
+    "parkingLot": "Nha xe TC",
+    "studentId": "20210681",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-28 17:40:00",
+    "exitTime": "2025-05-28 19:16:00",
+    "fee": 776208.43
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210229",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-28 16:05:00",
+    "exitTime": "2025-05-28 17:37:00",
+    "fee": 1107358.8
+  },
+  {
+    "parkingLot": "Nha xe D4-6",
+    "studentId": "20210904",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-21 10:06:00",
+    "exitTime": "2025-05-21 12:06:00",
+    "fee": 667943.18
+  },
+  {
+    "parkingLot": "Nha xe D9",
+    "studentId": "20210875",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-19 14:27:00",
+    "exitTime": "2025-05-19 14:59:00",
+    "fee": 519470.66
+  },
+  {
+    "parkingLot": "Nha xe C7",
+    "studentId": "20210806",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-07 07:04:00",
+    "exitTime": "2025-05-07 08:54:00",
+    "fee": 236951.39
+  },
+  {
+    "parkingLot": "Nha xe C7",
+    "studentId": "20210042",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-26 21:08:00",
+    "exitTime": "2025-05-27 00:00:00",
+    "fee": 1248326.5
+  },
+  {
+    "parkingLot": "Nha xe B1",
+    "studentId": "20210409",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-21 06:50:00",
+    "exitTime": "2025-05-21 09:26:00",
+    "fee": 41880.65
+  },
+  {
+    "parkingLot": "Nha xe B1",
+    "studentId": "20210911",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-21 20:28:00",
+    "exitTime": "2025-05-21 21:30:00",
+    "fee": 579839.38
+  },
+  {
+    "parkingLot": "Nha xe D9",
+    "studentId": "20210004",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-09 19:24:00",
+    "exitTime": "2025-05-09 22:04:00",
+    "fee": 1393040.39
+  },
+  {
+    "parkingLot": "Nha xe D3-5",
+    "studentId": "20210466",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-25 08:25:00",
+    "exitTime": "2025-05-25 09:19:00",
+    "fee": 579524.61
+  },
+  {
+    "parkingLot": "Nha xe B6",
+    "studentId": "20210228",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-03 19:45:00",
+    "exitTime": "2025-05-03 20:59:00",
+    "fee": 207190.26
+  },
+  {
+    "parkingLot": "Nha xe D9",
+    "studentId": "20210663",
+    "licensePlate": "20D1-11106",
+    "entryTime": "2025-05-25 18:03:00",
+    "exitTime": "2025-05-25 18:54:00",
+    "fee": 383100.61
+  },
+  {
+    "parkingLot": "Nha xe TC",
+    "studentId": "20210652",
+    "licensePlate": "99B-88888",
+    "entryTime": "2025-05-09 18:40:00",
+    "exitTime": "2025-05-09 20:03:00",
+    "fee": 1296450.34
+  },
+  {
+    "parkingLot": "Nha xe D3-5",
+    "studentId": "20210819",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-08 11:07:00",
+    "exitTime": "2025-05-08 12:04:00",
+    "fee": 304772.41
+  },
+  {
+    "parkingLot": "Nha xe D9",
+    "studentId": "20210277",
+    "licensePlate": "20D1-11106",
+    "entryTime": "2025-05-18 13:16:00",
+    "exitTime": "2025-05-18 15:48:00",
+    "fee": 923454.29
+  },
+  {
+    "parkingLot": "Nha xe TC",
+    "studentId": "20210782",
+    "licensePlate": "20D1-11106",
+    "entryTime": "2025-05-16 20:38:00",
+    "exitTime": "2025-05-16 23:14:00",
+    "fee": 474285.54
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210720",
+    "licensePlate": "20D1-11106",
+    "entryTime": "2025-05-26 18:36:00",
+    "exitTime": "2025-05-26 21:34:00",
+    "fee": 916700.83
+  },
+  {
+    "parkingLot": "Nha xe D9",
+    "studentId": "20210297",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-24 11:44:00",
+    "exitTime": "2025-05-24 12:41:00",
+    "fee": 377988.65
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20210521",
+    "licensePlate": "20D1-11106",
+    "entryTime": "2025-05-26 13:27:00",
+    "exitTime": "2025-05-26 15:07:00",
+    "fee": 502512.83
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20210102",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-18 12:54:00",
+    "exitTime": "2025-05-18 13:56:00",
+    "fee": 1422918.14
+  },
+  {
+    "parkingLot": "Nha xe B6",
+    "studentId": "20210637",
+    "licensePlate": "99B-88888",
+    "entryTime": "2025-05-25 20:25:00",
+    "exitTime": "2025-05-25 22:26:00",
+    "fee": 545467.64
+  },
+  {
+    "parkingLot": "Nha xe C7",
+    "studentId": "20210367",
+    "licensePlate": "99B-88888",
+    "entryTime": "2025-05-02 16:54:00",
+    "exitTime": "2025-05-02 18:48:00",
+    "fee": 656382.4
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20210426",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-09 14:47:00",
+    "exitTime": "2025-05-09 16:43:00",
+    "fee": 512576.63
+  },
+  {
+    "parkingLot": "Nha xe C7",
+    "studentId": "20210508",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-12 15:24:00",
+    "exitTime": "2025-05-12 17:13:00",
+    "fee": 1416236.52
+  },
+  {
+    "parkingLot": "Nha xe D4-6",
+    "studentId": "20210808",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-28 09:53:00",
+    "exitTime": "2025-05-28 11:51:00",
+    "fee": 618681.91
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20210229",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-07 17:01:00",
+    "exitTime": "2025-05-07 19:46:00",
+    "fee": 311668.26
+  },
+  {
+    "parkingLot": "Nha xe D9",
+    "studentId": "20210231",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-27 06:33:00",
+    "exitTime": "2025-05-27 09:10:00",
+    "fee": 1085619.53
+  },
+  {
+    "parkingLot": "Nha xe D9",
+    "studentId": "20210001",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-26 11:19:00",
+    "exitTime": "2025-05-26 12:37:00",
+    "fee": 728553.9
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20210911",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-25 21:57:00",
+    "exitTime": "2025-05-25 22:42:00",
+    "fee": 498788.48
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210364",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-04 19:21:00",
+    "exitTime": "2025-05-04 21:23:00",
+    "fee": 244607.41
+  },
+  {
+    "parkingLot": "Nha xe D3-5",
+    "studentId": "20210283",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-12 13:19:00",
+    "exitTime": "2025-05-12 13:57:00",
+    "fee": 120856.21
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20210569",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-11 16:12:00",
+    "exitTime": "2025-05-11 17:56:00",
+    "fee": 1006597.57
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20210428",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-26 18:43:00",
+    "exitTime": "2025-05-26 19:23:00",
+    "fee": 1255125.97
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20210559",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-16 12:47:00",
+    "exitTime": "2025-05-16 14:45:00",
+    "fee": 431651.6
+  },
+  {
+    "parkingLot": "Nha xe D3-5",
+    "studentId": "20210091",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-08 12:25:00",
+    "exitTime": "2025-05-08 12:58:00",
+    "fee": 118644.17
+  },
+  {
+    "parkingLot": "Nha xe TC",
+    "studentId": "20210904",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-11 15:19:00",
+    "exitTime": "2025-05-11 16:23:00",
+    "fee": 298116.77
+  },
+  {
+    "parkingLot": "Nha xe C7",
+    "studentId": "20210620",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-09 12:44:00",
+    "exitTime": "2025-05-09 14:19:00",
+    "fee": 58948.65
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20210695",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-28 13:22:00",
+    "exitTime": "2025-05-28 13:57:00",
+    "fee": 1053004.78
+  },
+  {
+    "parkingLot": "Nha xe D4-6",
+    "studentId": "20210091",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-14 09:39:00",
+    "exitTime": "2025-05-14 10:55:00",
+    "fee": 274644.83
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20210961",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-13 07:54:00",
+    "exitTime": "2025-05-13 10:17:00",
+    "fee": 723592.09
+  },
+  {
+    "parkingLot": "Nha xe B1",
+    "studentId": "20210882",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-23 21:48:00",
+    "exitTime": "2025-05-23 23:10:00",
+    "fee": 495024.18
+  },
+  {
+    "parkingLot": "Nha xe D3-5",
+    "studentId": "20210779",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-21 16:27:00",
+    "exitTime": "2025-05-21 17:13:00",
+    "fee": 346985.57
+  },
+  {
+    "parkingLot": "Nha xe TC",
+    "studentId": "20210091",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-19 15:24:00",
+    "exitTime": "2025-05-19 17:35:00",
+    "fee": 543408.45
+  },
+  {
+    "parkingLot": "Nha xe D4-6",
+    "studentId": "20210191",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-13 11:31:00",
+    "exitTime": "2025-05-13 12:28:00",
+    "fee": 298093.66
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20210285",
+    "licensePlate": "20D1-11106",
+    "entryTime": "2025-05-21 21:03:00",
+    "exitTime": "2025-05-21 22:37:00",
+    "fee": 940405.98
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210113",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-12 13:55:00",
+    "exitTime": "2025-05-12 14:54:00",
+    "fee": 985995.05
+  },
+  {
+    "parkingLot": "Nha xe D3-5",
+    "studentId": "20210195",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-21 18:40:00",
+    "exitTime": "2025-05-21 21:05:00",
+    "fee": 1008936.11
+  },
+  {
+    "parkingLot": "Nha xe B6",
+    "studentId": "20210423",
+    "licensePlate": "20D1-11106",
+    "entryTime": "2025-05-23 14:57:00",
+    "exitTime": "2025-05-23 16:16:00",
+    "fee": 1497638.86
+  },
+  {
+    "parkingLot": "Nha xe B1",
+    "studentId": "20210051",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-01 14:20:00",
+    "exitTime": "2025-05-01 17:16:00",
+    "fee": 1295328.83
+  },
+  {
+    "parkingLot": "Nha xe B1",
+    "studentId": "20210066",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-18 10:54:00",
+    "exitTime": "2025-05-18 12:48:00",
+    "fee": 566697.58
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210896",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-12 06:56:00",
+    "exitTime": "2025-05-12 08:13:00",
+    "fee": 691938.94
+  },
+  {
+    "parkingLot": "Nha xe D3-5",
+    "studentId": "20210787",
+    "licensePlate": "99B-88888",
+    "entryTime": "2025-05-12 21:55:00",
+    "exitTime": "2025-05-12 23:37:00",
+    "fee": 1381293.33
+  },
+  {
+    "parkingLot": "Nha xe C7",
+    "studentId": "20210498",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-21 13:24:00",
+    "exitTime": "2025-05-21 15:59:00",
+    "fee": 657990.14
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210825",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-04 19:14:00",
+    "exitTime": "2025-05-04 21:30:00",
+    "fee": 1227281.38
+  },
+  {
+    "parkingLot": "Nha xe D4-6",
+    "studentId": "20210728",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-27 06:51:00",
+    "exitTime": "2025-05-27 09:15:00",
+    "fee": 1354284.05
+  },
+  {
+    "parkingLot": "Nha xe TC",
+    "studentId": "20210159",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-28 20:00:00",
+    "exitTime": "2025-05-28 22:20:00",
+    "fee": 438733.21
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210030",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-03 17:05:00",
+    "exitTime": "2025-05-03 19:49:00",
+    "fee": 600565.27
+  },
+  {
+    "parkingLot": "Nha xe D4-6",
+    "studentId": "20210490",
+    "licensePlate": "20D1-11106",
+    "entryTime": "2025-05-15 08:04:00",
+    "exitTime": "2025-05-15 10:46:00",
+    "fee": 120947.5
+  },
+  {
+    "parkingLot": "Nha xe B1",
+    "studentId": "20210562",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-09 15:31:00",
+    "exitTime": "2025-05-09 16:57:00",
+    "fee": 211117.65
+  },
+  {
+    "parkingLot": "Nha xe D3-5",
+    "studentId": "20210317",
+    "licensePlate": "99B-88888",
+    "entryTime": "2025-05-10 20:08:00",
+    "exitTime": "2025-05-10 21:48:00",
+    "fee": 593910.59
+  },
+  {
+    "parkingLot": "Nha xe D4-6",
+    "studentId": "20210355",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-27 16:42:00",
+    "exitTime": "2025-05-27 17:31:00",
+    "fee": 1434068.58
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20210734",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-13 18:35:00",
+    "exitTime": "2025-05-13 21:34:00",
+    "fee": 1386257.78
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210343",
+    "licensePlate": "99B-88888",
+    "entryTime": "2025-05-16 07:07:00",
+    "exitTime": "2025-05-16 08:27:00",
+    "fee": 1094474.73
+  },
+  {
+    "parkingLot": "Nha xe TC",
+    "studentId": "20210484",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-02 14:20:00",
+    "exitTime": "2025-05-02 16:16:00",
+    "fee": 627561.5
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210747",
+    "licensePlate": "20D1-11106",
+    "entryTime": "2025-05-12 13:05:00",
+    "exitTime": "2025-05-12 16:01:00",
+    "fee": 581463.26
+  },
+  {
+    "parkingLot": "Nha xe B6",
+    "studentId": "20210394",
+    "licensePlate": "99B-88888",
+    "entryTime": "2025-05-24 13:46:00",
+    "exitTime": "2025-05-24 16:01:00",
+    "fee": 800331.03
+  },
+  {
+    "parkingLot": "Nha xe D3-5",
+    "studentId": "20210349",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-21 18:16:00",
+    "exitTime": "2025-05-21 19:23:00",
+    "fee": 423239.61
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210372",
+    "licensePlate": "20D1-11106",
+    "entryTime": "2025-05-13 11:50:00",
+    "exitTime": "2025-05-13 12:20:00",
+    "fee": 1253399.97
+  },
+  {
+    "parkingLot": "Nha xe D3-5",
+    "studentId": "20210786",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-14 09:52:00",
+    "exitTime": "2025-05-14 12:20:00",
+    "fee": 521700.27
+  },
+  {
+    "parkingLot": "Nha xe D9",
+    "studentId": "20210383",
+    "licensePlate": "20D1-11106",
+    "entryTime": "2025-05-04 19:55:00",
+    "exitTime": "2025-05-04 22:33:00",
+    "fee": 544544.38
+  },
+  {
+    "parkingLot": "Nha xe D4-6",
+    "studentId": "20210840",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-21 14:38:00",
+    "exitTime": "2025-05-21 16:56:00",
+    "fee": 1036367.7
+  },
+  {
+    "parkingLot": "Nha xe C7",
+    "studentId": "20210217",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-11 08:26:00",
+    "exitTime": "2025-05-11 10:07:00",
+    "fee": 342202.82
+  },
+  {
+    "parkingLot": "Nha xe D3-5",
+    "studentId": "20210150",
+    "licensePlate": "99B-88888",
+    "entryTime": "2025-05-22 09:13:00",
+    "exitTime": "2025-05-22 10:08:00",
+    "fee": 68498.66
+  },
+  {
+    "parkingLot": "Nha xe TC",
+    "studentId": "20210243",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-19 07:54:00",
+    "exitTime": "2025-05-19 09:26:00",
+    "fee": 1163680.03
+  },
+  {
+    "parkingLot": "Nha xe D3-5",
+    "studentId": "20210945",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-25 06:21:00",
+    "exitTime": "2025-05-25 07:14:00",
+    "fee": 888646.93
+  },
+  {
+    "parkingLot": "Nha xe D4-6",
+    "studentId": "20210999",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-23 11:02:00",
+    "exitTime": "2025-05-23 13:35:00",
+    "fee": 449698.69
+  },
+  {
+    "parkingLot": "Nha xe C7",
+    "studentId": "20210955",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-04 12:36:00",
+    "exitTime": "2025-05-04 13:59:00",
+    "fee": 716716.23
+  },
+  {
+    "parkingLot": "Nha xe D4-6",
+    "studentId": "20210683",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-23 06:32:00",
+    "exitTime": "2025-05-23 08:30:00",
+    "fee": 561156.47
+  },
+  {
+    "parkingLot": "Nha xe B6",
+    "studentId": "20210995",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-22 10:02:00",
+    "exitTime": "2025-05-22 11:25:00",
+    "fee": 1391989.83
+  },
+  {
+    "parkingLot": "Nha xe D4-6",
+    "studentId": "20210334",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-18 17:34:00",
+    "exitTime": "2025-05-18 20:08:00",
+    "fee": 1102031.58
+  },
+  {
+    "parkingLot": "Nha xe TC",
+    "studentId": "20210660",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-23 19:15:00",
+    "exitTime": "2025-05-23 20:15:00",
+    "fee": 1094114.74
+  },
+  {
+    "parkingLot": "Nha xe B1",
+    "studentId": "20210330",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-20 06:48:00",
+    "exitTime": "2025-05-20 08:08:00",
+    "fee": 799397.44
+  },
+  {
+    "parkingLot": "Nha xe B1",
+    "studentId": "20210713",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-11 06:06:00",
+    "exitTime": "2025-05-11 08:40:00",
+    "fee": 292567.24
+  },
+  {
+    "parkingLot": "Nha xe D9",
+    "studentId": "20210006",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-15 10:39:00",
+    "exitTime": "2025-05-15 11:22:00",
+    "fee": 453300.32
+  },
+  {
+    "parkingLot": "Nha xe B1",
+    "studentId": "20210021",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-12 21:02:00",
+    "exitTime": "2025-05-12 22:43:00",
+    "fee": 937180.47
+  },
+  {
+    "parkingLot": "Nha xe TC",
+    "studentId": "20210248",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-06 08:39:00",
+    "exitTime": "2025-05-06 10:54:00",
+    "fee": 1332251.97
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20210750",
+    "licensePlate": "20D1-11106",
+    "entryTime": "2025-05-06 12:43:00",
+    "exitTime": "2025-05-06 13:26:00",
+    "fee": 1184460.05
+  },
+  {
+    "parkingLot": "Nha xe B1",
+    "studentId": "20210862",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-22 12:29:00",
+    "exitTime": "2025-05-22 14:16:00",
+    "fee": 746212.25
+  },
+  {
+    "parkingLot": "Nha xe C7",
+    "studentId": "20210571",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-04 20:56:00",
+    "exitTime": "2025-05-04 23:24:00",
+    "fee": 1298177.16
+  },
+  {
+    "parkingLot": "Nha xe D4-6",
+    "studentId": "20210470",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-08 16:23:00",
+    "exitTime": "2025-05-08 18:29:00",
+    "fee": 368487.22
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210871",
+    "licensePlate": "20D1-11106",
+    "entryTime": "2025-05-20 13:30:00",
+    "exitTime": "2025-05-20 15:37:00",
+    "fee": 1452416.96
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210787",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-03 20:49:00",
+    "exitTime": "2025-05-03 22:31:00",
+    "fee": 672597.72
+  },
+  {
+    "parkingLot": "Nha xe B1",
+    "studentId": "20210829",
+    "licensePlate": "99B-88888",
+    "entryTime": "2025-05-04 09:11:00",
+    "exitTime": "2025-05-04 11:00:00",
+    "fee": 174046.45
+  },
+  {
+    "parkingLot": "Nha xe D9",
+    "studentId": "20210463",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-16 08:44:00",
+    "exitTime": "2025-05-16 09:46:00",
+    "fee": 45231.39
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210316",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-11 20:20:00",
+    "exitTime": "2025-05-11 22:46:00",
+    "fee": 514589.02
+  },
+  {
+    "parkingLot": "Nha xe D3-5",
+    "studentId": "20210824",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-02 06:27:00",
+    "exitTime": "2025-05-02 08:26:00",
+    "fee": 1245639.25
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20210562",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-07 10:49:00",
+    "exitTime": "2025-05-07 13:15:00",
+    "fee": 1193130.96
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20210109",
+    "licensePlate": "99B-88888",
+    "entryTime": "2025-05-25 10:58:00",
+    "exitTime": "2025-05-25 13:21:00",
+    "fee": 989309.53
+  },
+  {
+    "parkingLot": "Nha xe B1",
+    "studentId": "20210895",
+    "licensePlate": "20D1-11106",
+    "entryTime": "2025-05-08 10:23:00",
+    "exitTime": "2025-05-08 11:44:00",
+    "fee": 319669.6
+  },
+  {
+    "parkingLot": "Nha xe TC",
+    "studentId": "20210525",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-27 13:03:00",
+    "exitTime": "2025-05-27 14:25:00",
+    "fee": 1360126.65
+  },
+  {
+    "parkingLot": "Nha xe TC",
+    "studentId": "20210487",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-28 16:53:00",
+    "exitTime": "2025-05-28 18:04:00",
+    "fee": 736271.42
+  },
+  {
+    "parkingLot": "Nha xe D4-6",
+    "studentId": "20210861",
+    "licensePlate": "99B-88888",
+    "entryTime": "2025-05-04 19:10:00",
+    "exitTime": "2025-05-04 20:18:00",
+    "fee": 1267903.23
+  },
+  {
+    "parkingLot": "Nha xe TC",
+    "studentId": "20210920",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-20 12:57:00",
+    "exitTime": "2025-05-20 14:24:00",
+    "fee": 297296.39
+  },
+  {
+    "parkingLot": "Nha xe C7",
+    "studentId": "20210127",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-28 12:59:00",
+    "exitTime": "2025-05-28 13:42:00",
+    "fee": 541974.52
+  },
+  {
+    "parkingLot": "Nha xe B6",
+    "studentId": "20210964",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-08 06:53:00",
+    "exitTime": "2025-05-08 08:43:00",
+    "fee": 1264076.6
+  },
+  {
+    "parkingLot": "Nha xe TC",
+    "studentId": "20210548",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-07 16:20:00",
+    "exitTime": "2025-05-07 17:40:00",
+    "fee": 340549.89
+  },
+  {
+    "parkingLot": "Nha xe D9",
+    "studentId": "20210303",
+    "licensePlate": "20D1-11106",
+    "entryTime": "2025-05-04 20:32:00",
+    "exitTime": "2025-05-04 21:39:00",
+    "fee": 361340.49
+  },
+  {
+    "parkingLot": "Nha xe C7",
+    "studentId": "20210686",
+    "licensePlate": "99B-88888",
+    "entryTime": "2025-05-10 09:44:00",
+    "exitTime": "2025-05-10 10:57:00",
+    "fee": 1242949.22
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210120",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-02 15:28:00",
+    "exitTime": "2025-05-02 17:34:00",
+    "fee": 498483.65
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210355",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-24 11:21:00",
+    "exitTime": "2025-05-24 13:54:00",
+    "fee": 1440437.7
+  },
+  {
+    "parkingLot": "Nha xe C7",
+    "studentId": "20210700",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-23 08:52:00",
+    "exitTime": "2025-05-23 10:04:00",
+    "fee": 1461306.02
+  },
+  {
+    "parkingLot": "Nha xe C7",
+    "studentId": "20210673",
+    "licensePlate": "99B-88888",
+    "entryTime": "2025-05-03 10:15:00",
+    "exitTime": "2025-05-03 11:27:00",
+    "fee": 1365510.79
+  },
+  {
+    "parkingLot": "Nha xe D3-5",
+    "studentId": "20210346",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-25 08:41:00",
+    "exitTime": "2025-05-25 10:32:00",
+    "fee": 1338884.89
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210943",
+    "licensePlate": "99B-88888",
+    "entryTime": "2025-05-19 13:09:00",
+    "exitTime": "2025-05-19 14:04:00",
+    "fee": 245410.71
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210028",
+    "licensePlate": "99B-88888",
+    "entryTime": "2025-05-25 06:29:00",
+    "exitTime": "2025-05-25 07:55:00",
+    "fee": 890342.83
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210665",
+    "licensePlate": "99B-88888",
+    "entryTime": "2025-05-17 16:55:00",
+    "exitTime": "2025-05-17 17:36:00",
+    "fee": 1047848.36
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20210866",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-27 15:45:00",
+    "exitTime": "2025-05-27 16:15:00",
+    "fee": 1441910.22
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210582",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-02 07:57:00",
+    "exitTime": "2025-05-02 09:15:00",
+    "fee": 1379818.62
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210564",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-14 21:35:00",
+    "exitTime": "2025-05-14 22:23:00",
+    "fee": 1415641.61
+  },
+  {
+    "parkingLot": "Nha xe D9",
+    "studentId": "20210506",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-03 18:42:00",
+    "exitTime": "2025-05-03 19:26:00",
+    "fee": 880118.89
+  },
+  {
+    "parkingLot": "Nha xe D9",
+    "studentId": "20210501",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-24 18:05:00",
+    "exitTime": "2025-05-24 20:18:00",
+    "fee": 1036361.46
+  },
+  {
+    "parkingLot": "Nha xe C7",
+    "studentId": "20210328",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-13 21:46:00",
+    "exitTime": "2025-05-13 23:12:00",
+    "fee": 1018938.26
+  },
+  {
+    "parkingLot": "Nha xe C7",
+    "studentId": "20210542",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-08 15:03:00",
+    "exitTime": "2025-05-08 16:40:00",
+    "fee": 853688.6
+  },
+  {
+    "parkingLot": "Nha xe D3-5",
+    "studentId": "20210261",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-19 15:57:00",
+    "exitTime": "2025-05-19 17:03:00",
+    "fee": 1221326.38
+  },
+  {
+    "parkingLot": "Nha xe D9",
+    "studentId": "20210302",
+    "licensePlate": "99B-88888",
+    "entryTime": "2025-05-12 20:47:00",
+    "exitTime": "2025-05-12 22:05:00",
+    "fee": 962117.78
+  },
+  {
+    "parkingLot": "Nha xe C7",
+    "studentId": "20210287",
+    "licensePlate": "99B-88888",
+    "entryTime": "2025-05-08 11:39:00",
+    "exitTime": "2025-05-08 13:57:00",
+    "fee": 409475.97
+  },
+  {
+    "parkingLot": "Nha xe B1",
+    "studentId": "20210103",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-09 07:26:00",
+    "exitTime": "2025-05-09 09:08:00",
+    "fee": 116724.37
+  },
+  {
+    "parkingLot": "Nha xe B1",
+    "studentId": "20210735",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-10 21:54:00",
+    "exitTime": "2025-05-10 23:06:00",
+    "fee": 423940.61
+  },
+  {
+    "parkingLot": "Nha xe B6",
+    "studentId": "20210170",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-26 17:06:00",
+    "exitTime": "2025-05-26 17:58:00",
+    "fee": 1347878.25
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210822",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-15 06:54:00",
+    "exitTime": "2025-05-15 07:25:00",
+    "fee": 494581.87
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20210640",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-10 07:32:00",
+    "exitTime": "2025-05-10 08:29:00",
+    "fee": 161885.03
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20213719",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-17 13:28:00",
+    "exitTime": "2025-05-17 14:06:00",
+    "fee": 1045691.2
+  },
+  {
+    "parkingLot": "Nha xe C7",
+    "studentId": "20213719",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-06 20:26:00",
+    "exitTime": "2025-05-06 23:26:00",
+    "fee": 585293.9
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20213719",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-15 10:21:00",
+    "exitTime": "2025-05-15 11:12:00",
+    "fee": 868148.53
+  },
+  {
+    "parkingLot": "Nha xe D4-6",
+    "studentId": "20210230",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-20 17:25:00",
+    "exitTime": "2025-05-20 19:39:00",
+    "fee": 701214.48
+  },
+  {
+    "parkingLot": "Nha xe B1",
+    "studentId": "20210936",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-16 14:53:00",
+    "exitTime": "2025-05-16 16:22:00",
+    "fee": 795463.13
+  },
+  {
+    "parkingLot": "Nha xe D4-6",
+    "studentId": "20210187",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-10 18:59:00",
+    "exitTime": "2025-05-10 21:44:00",
+    "fee": 657577.54
+  },
+  {
+    "parkingLot": "Nha xe D9",
+    "studentId": "20210879",
+    "licensePlate": "20D1-11106",
+    "entryTime": "2025-05-23 10:26:00",
+    "exitTime": "2025-05-23 13:07:00",
+    "fee": 185599.29
+  },
+  {
+    "parkingLot": "Nha xe C7",
+    "studentId": "20213719",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-20 12:26:00",
+    "exitTime": "2025-05-20 14:16:00",
+    "fee": 863259.9
+  },
+  {
+    "parkingLot": "Nha xe C7",
+    "studentId": "20210531",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-08 20:14:00",
+    "exitTime": "2025-05-08 21:23:00",
+    "fee": 546280.03
+  },
+  {
+    "parkingLot": "Nha xe D4-6",
+    "studentId": "20213719",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-11 14:58:00",
+    "exitTime": "2025-05-11 17:14:00",
+    "fee": 410640.04
+  },
+  {
+    "parkingLot": "Nha xe TC",
+    "studentId": "20210314",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-15 14:48:00",
+    "exitTime": "2025-05-15 17:01:00",
+    "fee": 763266.29
+  },
+  {
+    "parkingLot": "Nha xe D9",
+    "studentId": "20210547",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-05 19:58:00",
+    "exitTime": "2025-05-05 21:18:00",
+    "fee": 1456320.23
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20213719",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-23 17:36:00",
+    "exitTime": "2025-05-23 18:57:00",
+    "fee": 416558.05
+  },
+  {
+    "parkingLot": "Nha xe C5",
+    "studentId": "20210579",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-24 15:12:00",
+    "exitTime": "2025-05-24 17:47:00",
+    "fee": 65584.44
+  },
+  {
+    "parkingLot": "Nha xe TC",
+    "studentId": "20213719",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-09 10:59:00",
+    "exitTime": "2025-05-09 11:40:00",
+    "fee": 1222219.75
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20210410",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-14 19:33:00",
+    "exitTime": "2025-05-14 21:23:00",
+    "fee": 704116.23
+  },
+  {
+    "parkingLot": "Nha xe TC",
+    "studentId": "20213719",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-03 08:45:00",
+    "exitTime": "2025-05-03 09:17:00",
+    "fee": 654570.52
+  },
+  {
+    "parkingLot": "Nha xe D4-6",
+    "studentId": "20210776",
+    "licensePlate": "88A-12345",
+    "entryTime": "2025-05-04 20:16:00",
+    "exitTime": "2025-05-04 20:53:00",
+    "fee": 416817.42
+  },
+  {
+    "parkingLot": "Nha xe B1",
+    "studentId": "20213719",
+    "licensePlate": "29C-55555",
+    "entryTime": "2025-05-14 19:07:00",
+    "exitTime": "2025-05-14 22:03:00",
+    "fee": 105908.36
+  },
+  {
+    "parkingLot": "Nha xe D4-6",
+    "studentId": "20210765",
+    "licensePlate": "20D1-11106",
+    "entryTime": "2025-05-19 15:22:00",
+    "exitTime": "2025-05-19 17:21:00",
+    "fee": 1033353.72
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20213719",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-21 17:25:00",
+    "exitTime": "2025-05-21 20:24:00",
+    "fee": 75949.15
+  },
+  {
+    "parkingLot": "Nha xe D4-6",
+    "studentId": "20213719",
+    "licensePlate": "19-D1 15318",
+    "entryTime": "2025-05-02 18:48:00",
+    "exitTime": "2025-05-02 21:18:00",
+    "fee": 960987.93
+  },
+  {
+    "parkingLot": "Nha xe B13",
+    "studentId": "20213719",
+    "licensePlate": "20D1-11106",
+    "entryTime": "2025-05-04 13:09:00",
+    "exitTime": "2025-05-04 15:15:00",
+    "fee": 310081.45
+  },
+  {
+    "parkingLot": "Nha xe D9",
+    "studentId": "20213719",
+    "licensePlate": "20D1-11106",
+    "entryTime": "2025-05-22 09:34:00",
+    "exitTime": "2025-05-22 12:08:00",
+    "fee": 322014.33
+  },
+  {
+    "parkingLot": "Nha xe D4-6",
+    "studentId": "20210962",
+    "licensePlate": "30H-99999",
+    "entryTime": "2025-05-25 06:15:00",
+    "exitTime": "2025-05-25 07:08:00",
+    "fee": 1004184.67
+  },
+  {
+    "parkingLot": "Nha xe D3-5",
+    "studentId": "20213982",
+    "licensePlate": "18C-12121",
+    "entryTime": "2025-05-23 09:55:00",
+    "exitTime": "2025-05-23 12:15:00",
+    "fee": 1075496.08
+  }
+]

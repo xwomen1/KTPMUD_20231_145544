@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Nha xe D9",
+    "lat": 21.004061,
+    "lng": 105.844573,
+    "capacity": 300,
+    "occupied": 150
+  },
+  {
+    "name": "Nha xe D3-5",
+    "lat": 21.004972,
+    "lng": 105.845431,
+    "capacity": 500,
+    "occupied": 300
+  },
+  {
+    "name": "Nha xe C7",
+    "lat": 21.005054,
+    "lng": 105.844911,
+    "capacity": 300,
+    "occupied": 120
+  },
+  {
+    "name": "Nha xe C5",
+    "lat": 21.005863,
+    "lng": 105.844629,
+    "capacity": 200,
+    "occupied": 80
+  },
+  {
+    "name": "Nha xe D4-6",
+    "lat": 21.004592,
+    "lng": 105.842322,
+    "capacity": 300,
+    "occupied": 200
+  },
+  {
+    "name": "Nha xe B1",
+    "lat": 21.005002,
+    "lng": 105.846058,
+    "capacity": 100,
+    "occupied": 90
+  },
+  {
+    "name": "Nha xe TC",
+    "lat": 21.002553,
+    "lng": 105.847055,
+    "capacity": 500,
+    "occupied": 350
+  },
+  {
+    "name": "Nha xe B13",
+    "lat": 21.006460,
+    "lng": 105.847312,
+    "capacity": 100,
+    "occupied": 40
+  },
+  {
+    "name": "Nha xe B6",
+    "lat": 21.006319,
+    "lng": 105.846545,
+    "capacity": 100,
+    "occupied": 60
+  }
+]

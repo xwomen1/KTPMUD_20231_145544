@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hệ thống quản lý bãi đỗ xe đại học</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+    }
+    
+    #container {
+      display: flex;
+      height: 100%;
+      width: 100%;
+    }
+    
+    #sidebar {
+      width: 400px;
+      padding: 15px;
+      background: #f8f9fa;
+      overflow-y: auto;
+      border-right: 1px solid #dee2e6;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    
+    #map-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    
+    #map {
+      flex: 1;
+      width: 100%;
+      min-height: 400px;
+    }
+    
+    #controls {
+      padding: 15px;
+      background: #fff;
+      border-bottom: 1px solid #dee2e6;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .form-group {
+      margin-bottom: 15px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: #495057;
+    }
+    
+    input, select {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+    
+    button {
+      background: #28a745;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 5px;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+    
+    button:hover {
+      background: #218838;
+    }
+    
+    button.secondary {
+      background: #6c757d;
+    }
+    
+    button.secondary:hover {
+      background: #5a6268;
+    }
+    
+    button.danger {
+      background: #dc3545;
+    }
+    
+    button.danger:hover {
+      background: #c82333;
+    }
+    
+    button.info {
+      background: #17a2b8;
+    }
+    
+    button.info:hover {
+      background: #138496;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+    
+    th, td {
+      border: 1px solid #dee2e6;
+      padding: 10px;
+      text-align: left;
+    }
+    
+    th {
+      background-color: #e9ecef;
+      font-weight: 600;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    
+    .tab {
+      display: none;
+    }
+    
+    .tab.active {
+      display: block;
+    }
+    
+    .tab-buttons {
+      display: flex;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #dee2e6;
+    }
+    
+    .tab-button {
+      flex: 1;
+      background: #f8f9fa;
+      border: none;
+      border-bottom: 3px solid transparent;
+      padding: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      color: #495057;
+      transition: all 0.3s;
+    }
+    
+    .tab-button.active {
+      background: #fff;
+      border-bottom: 3px solid #28a745;
+      color: #28a745;
+    }
+    
+    .status-indicator {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+    
+    .status-available {
+      background-color: #28a745;
+    }
+    
+    .status-full {
+      background-color: #dc3545;
+    }
+    
+    .parking-info {
+      background: #fff;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .parking-info h3 {
+      margin-top: 0;
+      color: #343a40;
+    }
+    
+    .chart-container {
+      height: 300px;
+      margin-top: 20px;
+    }
+    
+    .date-range {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .date-range input {
+      flex: 1;
+    }
+    
+    .card-balance {
+      background: linear-gradient(135deg, #28a745, #20c997);
+      color: white;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    
+    .card-balance h3 {
+      margin-top: 0;
+    }
+    
+    .balance-amount {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    
+    .control-group {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    
+    .control-group label {
+      margin-bottom: 0;
+    }
+    
+    .leaflet-popup-content {
+      min-width: 200px;
+    }
+    
+    .parking-marker {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+
+<div id="container">
+  <!-- Sidebar quản lý -->
+  <div id="sidebar">
+    <h2 style="color: #28a745; margin-bottom: 20px;">Hệ thống quản lý bãi đỗ xe</h2>
+    
+    <div class="tab-buttons">
+      <button class="tab-button active" onclick="openTab('parking-status')">Trạng thái bãi xe</button>
+      <button class="tab-button" onclick="openTab('student-mgmt')">Quản lý sinh viên</button>
+      <button class="tab-button" onclick="openTab('reports')">Báo cáo thống kê</button>
+    </div>
+    
+    <!-- Tab trạng thái bãi xe -->
+    <div id="parking-status" class="tab active">
+      <div class="parking-info">
+        <h3>Tình trạng các nhà xe</h3>
+        <table id="parking-status-table">
+          <thead>
+            <tr>
+              <th>Nhà xe</th>
+              <th>Trạng thái</th>
+              <th>Chỗ trống</th>
+              <th>Tỉ lệ</th>
+            </tr>
+          </thead>
+          <tbody id="parking-status-body">
+            <!-- Dữ liệu sẽ được thêm vào đây -->
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="parking-info">
+        <h3>Thông tin thẻ xe</h3>
+        <div class="form-group">
+          <label for="card-search">Tìm kiếm thẻ xe:</label>
+          <input type="text" id="card-search" placeholder="Nhập mã sinh viên hoặc biển số xe">
+          <button onclick="searchCard()" class="info">Tìm kiếm</button>
+        </div>
+        
+        <div id="card-info" style="display: none;">
+          <div class="card-balance">
+            <h3>Thông tin thẻ xe</h3>
+            <p id="card-owner"></p>
+            <p id="card-plate"></p>
+            <p>Số dư: <span id="card-balance" class="balance-amount"></span></p>
+          </div>
+          
+          <div class="form-group">
+            <label for="card-amount">Số tiền nạp (VND):</label>
+            <input type="number" id="card-amount" min="10000" step="10000">
+            <button onclick="topUpCard()" class="secondary">Nạp tiền</button>
+          </div>
+          
+          <h4>Lịch sử giao dịch</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Thời gian</th>
+                <th>Nội dung</th>
+                <th>Số tiền</th>
+              </tr>
+            </thead>
+            <tbody id="card-transactions">
+              <!-- Dữ liệu sẽ được thêm vào đây -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Tab quản lý sinh viên -->
+    <div id="student-mgmt" class="tab">
+      <input type="text" id="search-student" placeholder="Tìm kiếm sinh viên..." oninput="searchStudents()">
+      <table id="students-table">
+        <thead>
+          <tr>
+            <th>Mã SV</th>
+            <th>Tên</th>
+            <th>Khoa</th>
+            <th>Biển số xe</th>
+            <th>Thao tác</th>
+          </tr>
+        </thead>
+        <tbody id="students-table-body">
+          <!-- Dữ liệu sinh viên sẽ được thêm vào đây -->
+        </tbody>
+      </table>
+      
+      <div style="margin-top: 20px;">
+        <h3>Thêm/Cập nhật sinh viên</h3>
+        <div class="form-group">
+          <label for="student-id">Mã sinh viên:</label>
+          <input type="text" id="student-id" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="student-name">Họ và tên:</label>
+          <input type="text" id="student-name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="student-faculty">Khoa:</label>
+          <input type="text" id="student-faculty" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="student-license">Biển số xe:</label>
+          <input type="text" id="student-license" required>
+        </div>
+        
+        <div class="form-group">
+          <button id="save-student" onclick="saveStudent()" class="secondary">Lưu</button>
+          <button id="cancel-edit" onclick="cancelEdit()" class="danger" style="display: none;">Hủy</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Tab báo cáo thống kê -->
+    <div id="reports" class="tab">
+      <div class="form-group">
+        <label>Chọn nhà xe:</label>
+        <select id="report-parking">
+          <option value="all">Tất cả nhà xe</option>
+          <!-- Các nhà xe sẽ được thêm bằng JavaScript -->
+        </select>
+      </div>
+      
+      <div class="form-group date-range">
+        <div style="flex: 1;">
+          <label for="report-from">Từ ngày:</label>
+          <input type="datetime-local" id="report-from">
+        </div>
+        <div style="flex: 1;">
+          <label for="report-to">Đến ngày:</label>
+          <input type="datetime-local" id="report-to">
+        </div>
+      </div>
+      
+      <button onclick="generateReport()" class="info">Tạo báo cáo</button>
+      
+      <div class="chart-container">
+        <canvas id="usageChart"></canvas>
+      </div>
+      
+      <table id="report-table">
+        <thead>
+          <tr>
+            <th>Nhà xe</th>
+            <th>Số lượt vào</th>
+            <th>Số lượt ra</th>
+            <th>Doanh thu</th>
+            <th>Tần suất sử dụng</th>
+          </tr>
+        </thead>
+        <tbody id="report-table-body">
+          <!-- Dữ liệu báo cáo sẽ được thêm vào đây -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <!-- Bản đồ và điều khiển -->
+  <div id="map-container">
+    <div id="controls">
+      <div>
+        <strong>Tìm đường đi:</strong><br>
+        Từ:
+        <select id="from"></select>
+        Đến:
+        <select id="to"></select>
+        <button onclick="findPath()">Tìm đường</button>
+      </div>
+      <div style="margin-top:10px;">
+        <strong>Gợi ý nhà xe:</strong><br>
+        <label>Vị trí hiện tại:</label>
+        <input id="lat" placeholder="Vĩ độ" size="10" />
+        <input id="lng" placeholder="Kinh độ" size="10" />
+        <button onclick="suggestParking()">Gợi ý nhà xe gần nhất</button>
+      </div>
+    </div>
+    <div id="map"></div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/vn.js"></script>
+<script>
+// Biến toàn cục
+const map = L.map('map').setView([21.0045, 105.8456], 16);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+const points = {
+  "Nha xe D9": [21.004061,105.844573],
+  "Nha xe D3-5": [21.004972,105.845431],
+  "Nha xe C7": [21.005054, 105.844911],
+  "Nha xe C5": [21.005863, 105.844629],
+  "Nha xe D4-6": [21.004592,105.842322],
+  "Nha xe B1": [21.005002,105.846058],
+  "Nha xe TC": [21.002553,105.847055],
+  "Nha xe B13": [21.006460,105.847312],
+  "Nha xe B6": [21.006319,105.846545],
+};
+
+const fromSelect = document.getElementById('from');
+const toSelect = document.getElementById('to');
+const reportParkingSelect = document.getElementById('report-parking');
+let routeLine;
+let currentLocationMarker;
+let currentLocation = null;
+let editingStudentId = null;
+let usageChart = null;
+let parkingMarkers = {};
+let currentCard = null;
+
+// Khởi tạo dropdown chọn điểm
+for (let id in points) {
+  fromSelect.add(new Option(id, id));
+  toSelect.add(new Option(id, id));
+  reportParkingSelect.add(new Option(id, id));
+  
+  // Thêm marker cho mỗi nhà xe với popup thông tin
+  parkingMarkers[id] = L.marker(points[id], {
+    icon: L.divIcon({
+      className: 'parking-marker',
+      html: `<div style="background: #dc3545; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-weight: bold;">${id.split(' ')[2]}</div>`,
+      iconSize: [30, 30]
+    })
+  }).addTo(map).bindPopup(`<b>${id}</b><br>Đang tải thông tin...`);
+}
+
+// Cấu hình datetime picker
+flatpickr("#report-from", {
+  enableTime: true,
+  dateFormat: "Y-m-d H:i",
+  locale: "vn",
+  defaultDate: new Date(new Date().setDate(new Date().getDate() - 7))
+});
+
+flatpickr("#report-to", {
+  enableTime: true,
+  dateFormat: "Y-m-d H:i",
+  locale: "vn",
+  defaultDate: new Date()
+});
+
+// Cập nhật trạng thái các nhà xe
+async function updateParkingStatus() {
+  try {
+    const response = await fetch('http://localhost:8080/parking-status');
+    const statusData = await response.json();
+    
+    const tableBody = document.getElementById('parking-status-body');
+    tableBody.innerHTML = '';
+    
+    for (const [id, data] of Object.entries(statusData)) {
+      const percentage = Math.round((data.occupied / data.capacity) * 100);
+      const available = data.capacity - data.occupied;
+      const statusClass = available > 0 ? 'status-available' : 'status-full';
+      const statusText = available > 0 ? 'Còn trống' : 'Đã đầy';
+      
+      // Cập nhật bảng
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${id}</td>
+        <td><span class="status-indicator ${statusClass}"></span>${statusText}</td>
+        <td>${available}/${data.capacity}</td>
+        <td>
+          <div style="background: #e9ecef; height: 20px; border-radius: 3px;">
+            <div style="background: ${available > 0 ? '#28a745' : '#dc3545'}; width: ${percentage}%; height: 100%; border-radius: 3px;"></div>
+          </div>
+        </td>
+      `;
+      tableBody.appendChild(row);
+      
+      // Cập nhật marker trên bản đồ
+      if (parkingMarkers[id]) {
+        const marker = parkingMarkers[id];
+        marker.setPopupContent(`
+          <b>${id}</b><br>
+          Trạng thái: <span style="color: ${available > 0 ? '#28a745' : '#dc3545'}">${statusText}</span><br>
+          Chỗ trống: ${available}/${data.capacity}<br>
+          Tỉ lệ: ${percentage}%
+        `);
+        
+        // Đổi màu marker dựa trên trạng thái
+        marker.setIcon(L.divIcon({
+          className: 'parking-marker',
+          html: `<div style="background: ${available > 0 ? '#28a745' : '#dc3545'}; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-weight: bold;">${id.split(' ')[2]}</div>`,
+          iconSize: [30, 30]
+        }));
+      }
+    }
+  } catch (error) {
+    console.error('Lỗi khi cập nhật trạng thái bãi xe:', error);
+  }
+}
+
+// Tìm kiếm thông tin thẻ xe
+async function searchCard() {
+  const searchTerm = document.getElementById('card-search').value.trim();
+  if (!searchTerm) return;
+
+  try {
+    const response = await fetch(`http://localhost:8080/card-info?search=${encodeURIComponent(searchTerm)}`);
+    const cardInfo = await response.json();
+    
+    if (response.ok) {
+      currentCard = cardInfo;
+      document.getElementById('card-info').style.display = 'block';
+      document.getElementById('card-owner').textContent = `Chủ thẻ: ${cardInfo.studentName} (${cardInfo.studentId})`;
+      document.getElementById('card-plate').textContent = `Biển số: ${cardInfo.licensePlate}`;
+      document.getElementById('card-balance').textContent = `${cardInfo.balance.toLocaleString()} VND`;
+      
+      // Hiển thị lịch sử giao dịch
+      const transactionsBody = document.getElementById('card-transactions');
+      transactionsBody.innerHTML = '';
+      
+      cardInfo.transactions.forEach(transactionStr => {
+  const [timePart, rest] = transactionStr.split(' - ');
+  const [description, amountRaw] = rest.split(': ');
+  const amount = parseFloat(amountRaw.replace(/[^\d.-]/g, ''));
+
+  const row = document.createElement('tr');
+  row.innerHTML = `
+    <td>${new Date(timePart).toLocaleString()}</td>
+    <td>${description}</td>
+    <td style="color: ${amount >= 0 ? '#28a745' : '#dc3545'}">${amount >= 0 ? '+' : ''}${amount.toLocaleString()} VND</td>
+  `;
+  transactionsBody.appendChild(row);
+});
+
+    } else {
+      alert(cardInfo.error || 'Không tìm thấy thông tin thẻ');
+      document.getElementById('card-info').style.display = 'none';
+    }
+  } catch (error) {
+    
+   
+  }
+}
+
+// Nạp tiền vào thẻ xe
+async function topUpCard() {
+  if (!currentCard) return;
+  
+  const amount = parseInt(document.getElementById('card-amount').value);
+  if (isNaN(amount) || amount <= 0) {
+    alert('Vui lòng nhập số tiền hợp lệ');
+    return;
+  }
+
+  try {
+    const response = await fetch(`http://localhost:8080/top-up`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        studentId: currentCard.studentId,
+        amount: amount
+      })
+    });
+    
+    const result = await response.json();
+    
+    if (response.ok) {
+      alert(`Nạp tiền thành công: ${amount.toLocaleString()} VND`);
+      currentCard.balance += amount;
+      document.getElementById('card-balance').textContent = `${currentCard.balance.toLocaleString()} VND`;
+      
+      // Thêm giao dịch mới vào lịch sử
+      const transactionsBody = document.getElementById('card-transactions');
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${new Date().toLocaleString()}</td>
+        <td>Nạp tiền vào thẻ</td>
+        <td style="color: #28a745">+${amount.toLocaleString()} VND</td>
+      `;
+      transactionsBody.insertBefore(row, transactionsBody.firstChild);
+      
+      document.getElementById('card-amount').value = '';
+    } else {
+      alert(result.error || 'Lỗi khi nạp tiền');
+    }
+  } catch (error) {
+    console.error('Lỗi khi nạp tiền:', error);
+    alert('Lỗi khi nạp tiền');
+  }
+}
+
+// Tạo báo cáo thống kê
+async function generateReport() {
+  const parkingId = reportParkingSelect.value;
+  const fromDate = document.getElementById('report-from').value;
+  const toDate = document.getElementById('report-to').value;
+  
+  try {
+    const response = await fetch(`http://localhost:8080/report?parking=${parkingId}&from=${encodeURIComponent(fromDate)}&to=${encodeURIComponent(toDate)}`);
+    const reportData = await response.json();
+    
+    if (!response.ok) {
+      alert(reportData.error || 'Lỗi khi tạo báo cáo');
+      return;
+    }
+    
+    // Hiển thị dữ liệu báo cáo
+    const reportBody = document.getElementById('report-table-body');
+    reportBody.innerHTML = '';
+    
+    let totalIn = 0;
+    let totalOut = 0;
+    let totalRevenue = 0;
+    
+    reportData.forEach(item => {
+      totalIn += item.entryCount;
+      totalOut += item.exitCount;
+      totalRevenue += item.revenue;
+      
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${item.parkingName}</td>
+        <td>${item.entryCount}</td>
+        <td>${item.exitCount}</td>
+        <td>${item.revenue.toLocaleString()} VND</td>
+        <td>${item.usageRate}%</td>
+      `;
+      reportBody.appendChild(row);
+    });
+    
+    // Thêm tổng cộng
+    const totalRow = document.createElement('tr');
+    totalRow.style.fontWeight = 'bold';
+    totalRow.style.backgroundColor = '#f8f9fa';
+    totalRow.innerHTML = `
+      <td>Tổng cộng</td>
+      <td>${totalIn}</td>
+      <td>${totalOut}</td>
+      <td>${totalRevenue.toLocaleString()} VND</td>
+      <td>${Math.round((totalIn / (totalIn + totalOut)) * 100)}%</td>
+    `;
+    reportBody.appendChild(totalRow);
+    
+    // Vẽ biểu đồ
+    drawUsageChart(reportData);
+  } catch (error) {
+    console.error('Lỗi khi tạo báo cáo:', error);
+    alert('Lỗi khi tạo báo cáo');
+  }
+}
+
+// Vẽ biểu đồ sử dụng
+function drawUsageChart(data) {
+  const ctx = document.getElementById('usageChart').getContext('2d');
+  
+  // Hủy biểu đồ cũ nếu có
+  if (usageChart) {
+    usageChart.destroy();
+  }
+  
+  const labels = data.map(item => item.parkingName);
+  const entryData = data.map(item => item.entryCount);
+  const exitData = data.map(item => item.exitCount);
+  
+  usageChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: 'Lượt vào',
+          data: entryData,
+          backgroundColor: 'rgba(40, 167, 69, 0.7)',
+          borderColor: 'rgba(40, 167, 69, 1)',
+          borderWidth: 1
+        },
+        {
+          label: 'Lượt ra',
+          data: exitData,
+          backgroundColor: 'rgba(220, 53, 69, 0.7)',
+          borderColor: 'rgba(220, 53, 69, 1)',
+          borderWidth: 1
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        y: {
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: 'Số lượt xe'
+          }
+        },
+        x: {
+          title: {
+            display: true,
+            text: 'Nhà xe'
+          }
+        }
+      }
+    }
+  });
+}
+
+// Chuyển đổi giữa các tab
+function openTab(tabId) {
+  // Ẩn tất cả các tab
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.classList.remove('active');
+  });
+  
+  // Xóa trạng thái active của tất cả các nút tab
+  document.querySelectorAll('.tab-button').forEach(button => {
+    button.classList.remove('active');
+  });
+  
+  // Hiển thị tab được chọn
+  document.getElementById(tabId).classList.add('active');
+  
+  // Thêm trạng thái active cho nút tab
+  document.querySelector(`.tab-button[onclick="openTab('${tabId}')"]`).classList.add('active');
+  
+  // Tải lại dữ liệu nếu cần
+  if (tabId === 'parking-status') {
+    updateParkingStatus();
+  } else if (tabId === 'student-mgmt') {
+    loadStudents();
+  }
+}
+
+
+
+// Tải danh sách sinh viên từ backend
+// Tải danh sách sinh viên từ backend
+async function loadStudents() {
+  try {
+    const response = await fetch('http://localhost:8080/students');
+    
+    // Kiểm tra response
+    if (!response.ok) {
+      throw new Error(`Lỗi HTTP: ${response.status}`);
+    }
+    
+    const students = await response.json();
+    
+    // DEBUG: Kiểm tra dữ liệu nhận được
+    console.log('Số lượng sinh viên nhận được:', students.length);
+    console.log('Dữ liệu sinh viên:', students);
+    
+    renderStudentsTable(students);
+  } catch (error) {
+    console.error('Lỗi khi tải danh sách sinh viên:', error);
+    alert('Lỗi khi tải danh sách sinh viên: ' + error.message);
+  }
+}
+
+// Render bảng sinh viên
+function renderStudentsTable(students) {
+  const tableBody = document.getElementById('students-table-body');
+  
+  // Xóa toàn bộ nội dung cũ một cách an toàn
+  while (tableBody.firstChild) {
+    tableBody.removeChild(tableBody.firstChild);
+  }
+  
+  // Kiểm tra nếu không có sinh viên
+  if (!students || students.length === 0) {
+    const row = document.createElement('tr');
+    row.innerHTML = `<td colspan="5" style="text-align: center;">Không có dữ liệu sinh viên</td>`;
+    tableBody.appendChild(row);
+    return;
+  }
+  
+  // Render từng sinh viên
+  students.forEach(student => {
+    // Kiểm tra dữ liệu hợp lệ trước khi render
+    if (student.id && student.name) {
+      const row = document.createElement('tr');
+      
+      // Escape các giá trị để tránh lỗi XSS và hiển thị sai
+      const id = escapeHTML(student.id);
+      const name = escapeHTML(student.name);
+      const faculty = escapeHTML(student.faculty || '');
+      const licensePlate = escapeHTML(student.licensePlate || '');
+      
+      row.innerHTML = `
+        <td>${id}</td>
+        <td>${name}</td>
+        <td>${faculty}</td>
+        <td>${licensePlate}</td>
+        <td>
+          <button onclick="editStudent('${id}')" class="info">Sửa</button>
+          <button onclick="deleteStudent('${id}')" class="danger">Xóa</button>
+        </td>
+      `;
+      tableBody.appendChild(row);
+    }
+  });
+}
+
+// Hàm escape HTML để tránh XSS và lỗi hiển thị
+function escapeHTML(str) {
+  return str.replace(/[&<>"']/g, 
+    tag => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;'
+    }[tag] || tag));
+}
+
+// Chỉnh sửa sinh viên
+async function editStudent(id) {
+  try {
+    const response = await fetch(`http://localhost:8080/students/${id}`);
+    
+    if (!response.ok) {
+      throw new Error('Không tải được thông tin sinh viên');
+    }
+    
+    const student = await response.json();
+    
+    // Điền thông tin vào form
+    document.getElementById('student-id').value = student.id;
+    document.getElementById('student-name').value = student.name;
+    document.getElementById('student-faculty').value = student.faculty || '';
+    document.getElementById('student-license').value = student.licensePlate || '';
+    
+    // Lưu ID đang chỉnh sửa
+    editingStudentId = student.id;
+    
+    // Hiển thị nút hủy
+    document.getElementById('cancel-edit').style.display = 'inline-block';
+    
+    // Khóa trường mã sinh viên
+    document.getElementById('student-id').disabled = true;
+    
+    // Cuộn đến form chỉnh sửa
+    document.getElementById('student-mgmt').scrollIntoView({ behavior: 'smooth' });
+    
+  } catch (error) {
+    console.error('Lỗi khi chỉnh sửa sinh viên:', error);
+    alert('Lỗi khi tải thông tin sinh viên: ' + error.message);
+  }
+}
+
+// Hủy chỉnh sửa
+function cancelEdit() {
+  // Xóa form
+  document.getElementById('student-id').value = '';
+  document.getElementById('student-name').value = '';
+  document.getElementById('student-faculty').value = '';
+  document.getElementById('student-license').value = '';
+  
+  // Mở khóa trường mã sinh viên
+  document.getElementById('student-id').disabled = false;
+  
+  // Ẩn nút hủy
+  document.getElementById('cancel-edit').style.display = 'none';
+  
+  // Reset biến chỉnh sửa
+  editingStudentId = null;
+}
+
+// Lưu sinh viên
+async function saveStudent() {
+  const studentData = {
+    id: document.getElementById('student-id').value,
+    name: document.getElementById('student-name').value,
+    faculty: document.getElementById('student-faculty').value,
+    licensePlate: document.getElementById('student-license').value
+  };
+  
+  if (!studentData.id || !studentData.name) {
+    alert('Vui lòng nhập mã sinh viên và tên');
+    return;
+  }
+  
+  try {
+    let url = 'http://localhost:8080/students';
+    let method = 'POST';
+    
+    // Nếu đang chỉnh sửa thì dùng PUT
+    if (editingStudentId) {
+      url = `http://localhost:8080/students/${editingStudentId}`;
+      method = 'PUT';
+    }
+    
+    const response = await fetch(url, {
+      method: method,
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(studentData)
+    });
+    
+    if (response.ok) {
+      alert(editingStudentId ? 'Cập nhật sinh viên thành công' : 'Thêm sinh viên thành công');
+      
+      // Tải lại dữ liệu sau khi lưu
+      await loadStudents();
+      cancelEdit();
+    } else {
+      const error = await response.json();
+      alert(error.error || 'Lỗi khi lưu sinh viên');
+    }
+  } catch (error) {
+    console.error('Lỗi khi lưu sinh viên:', error);
+    alert('Lỗi khi lưu sinh viên: ' + error.message);
+  }
+}
+
+// Xóa sinh viên
+async function deleteStudent(id) {
+  if (!confirm('Bạn có chắc chắn muốn xóa sinh viên này?')) return;
+  
+  try {
+    const response = await fetch(`http://localhost:8080/students/${id}`, {
+      method: 'DELETE'
+    });
+    
+    if (response.ok) {
+      alert('Xóa sinh viên thành công');
+      // Tải lại dữ liệu sau khi xóa
+      await loadStudents();
+    } else {
+      const error = await response.json();
+      alert(error.error || 'Lỗi khi xóa sinh viên');
+    }
+  } catch (error) {
+    console.error('Lỗi khi xóa sinh viên:', error);
+    alert('Lỗi khi xóa sinh viên: ' + error.message);
+  }
+}
+
+// Tìm kiếm sinh viên
+async function searchStudents() {
+  const searchTerm = document.getElementById('search-student').value.toLowerCase().trim();
+  
+  try {
+    const response = await fetch('http://localhost:8080/students');
+    
+    if (!response.ok) {
+      throw new Error('Không tải được danh sách sinh viên');
+    }
+    
+    const students = await response.json();
+    
+    // Nếu không có từ khóa tìm kiếm, hiển thị tất cả
+    if (!searchTerm) {
+      renderStudentsTable(students);
+      return;
+    }
+    
+    // Lọc sinh viên
+    const filteredStudents = students.filter(student => {
+      // Kiểm tra từng trường có tồn tại không
+      return (
+        (student.id && student.id.toLowerCase().includes(searchTerm)) ||
+        (student.name && student.name.toLowerCase().includes(searchTerm)) ||
+        (student.faculty && student.faculty.toLowerCase().includes(searchTerm)) ||
+        (student.licensePlate && student.licensePlate.toLowerCase().includes(searchTerm))
+      );
+    });
+    
+    renderStudentsTable(filteredStudents);
+  } catch (error) {
+    console.error('Lỗi khi tìm kiếm sinh viên:', error);
+    alert('Lỗi khi tìm kiếm sinh viên: ' + error.message);
+  }
+}
+
+// Tải dữ liệu khi trang được tải
+document.addEventListener('DOMContentLoaded', () => {
+  loadStudents();
+});
+// Tìm đường đi
+async function findPath() {
+  const from = document.getElementById('from').value;
+  const to = document.getElementById('to').value;
+  
+  if (!from || !to) {
+    alert('Vui lòng chọn điểm xuất phát và điểm đến');
+    return;
+  }
+  
+  try {
+    const response = await fetch(`http://localhost:8080/path?from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}`);
+    const pathData = await response.json();
+    
+    if (!response.ok) {
+      alert(pathData.error || 'Không tìm thấy đường đi');
+      return;
+    }
+    
+    // Xóa đường đi cũ nếu có
+    if (routeLine) {
+      map.removeLayer(routeLine);
+    }
+    
+    // Vẽ đường đi mới
+    const latLngs = pathData.map(point => [point.lat, point.lng]);
+    routeLine = L.polyline(latLngs, {color: 'blue'}).addTo(map);
+    map.fitBounds(routeLine.getBounds());
+  } catch (error) {
+    console.error('Lỗi khi tìm đường:', error);
+    alert('Lỗi khi tìm đường');
+  }
+}
+
+// Gợi ý nhà xe gần nhất
+async function suggestParking() {
+  const lat = parseFloat(document.getElementById('lat').value);
+  const lng = parseFloat(document.getElementById('lng').value);
+  
+  if (isNaN(lat) || isNaN(lng)) {
+    alert('Vui lòng nhập tọa độ hợp lệ');
+    return;
+  }
+  
+  try {
+    const response = await fetch('http://localhost:8080/nearest', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ lat, lng })
+    });
+    
+    const result = await response.json();
+    
+    if (!response.ok) {
+      alert(result.error || 'Không tìm thấy nhà xe nào gần đây');
+      return;
+    }
+    
+    // Hiển thị kết quả
+    alert(`Nhà xe gần nhất còn chỗ: ${result.parkingID}`);
+    
+    // Vẽ đường đi đến nhà xe
+    const path = result.path.map(point => [point.lat, point.lng]);
+    if (routeLine) {
+      map.removeLayer(routeLine);
+    }
+    routeLine = L.polyline(path, {color: 'green'}).addTo(map);
+    map.fitBounds(routeLine.getBounds());
+    
+    // Đánh dấu vị trí hiện tại
+    if (currentLocationMarker) {
+      map.removeLayer(currentLocationMarker);
+    }
+    currentLocationMarker = L.marker([lat, lng], {
+      icon: L.divIcon({
+        className: 'current-location-marker',
+        html: '<div style="background: #007bff; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-weight: bold;">V</div>',
+        iconSize: [30, 30]
+      })
+    }).addTo(map).bindPopup('<b>Vị trí của bạn</b>').openPopup();
+  } catch (error) {
+    console.error('Lỗi khi gợi ý nhà xe:', error);
+    alert('Lỗi khi gợi ý nhà xe');
+  }
+}
+
+// Tải dữ liệu ban đầu
+document.addEventListener('DOMContentLoaded', () => {
+  updateParkingStatus();
+  loadStudents();
+  
+  // Cập nhật trạng thái bãi xe mỗi phút
+  setInterval(updateParkingStatus, 60000);
+  
+  // Lấy vị trí hiện tại nếu trình duyệt hỗ trợ
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(position => {
+      const { latitude, longitude } = position.coords;
+      document.getElementById('lat').value = latitude;
+      document.getElementById('lng').value = longitude;
+    }, error => {
+      console.error('Lỗi khi lấy vị trí:', error);
+    });
+  }
+});
+</script>
+</body>
+</html>
