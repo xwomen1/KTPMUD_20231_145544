@@ -804,7 +804,7 @@ function openTab(tabId) {
 // Tải danh sách sinh viên từ backend
 async function loadStudents() {
   try {
-    const response = await fetch('${ENV.API_BASE_URL}/students');
+    const response = await fetch(`${ENV.API_BASE_URL}/students`);
     
     // Kiểm tra response
     if (!response.ok) {
@@ -948,7 +948,7 @@ async function saveStudent() {
   }
   
   try {
-    let url = '${ENV.API_BASE_URL}/students';
+    let url = `${ENV.API_BASE_URL}/students`;
     let method = 'POST';
     
     // Nếu đang chỉnh sửa thì dùng PUT
@@ -1009,7 +1009,7 @@ async function searchStudents() {
   const searchTerm = document.getElementById('search-student').value.toLowerCase().trim();
   
   try {
-    const response = await fetch('${ENV.API_BASE_URL}/students');
+    const response = await fetch(`${ENV.API_BASE_URL}/students`);
     
     if (!response.ok) {
       throw new Error('Không tải được danh sách sinh viên');
@@ -1090,7 +1090,7 @@ async function suggestParking() {
   }
   
   try {
-    const response = await fetch('${ENV.API_BASE_URL}/nearest', {
+    const response = await fetch(`${ENV.API_BASE_URL}/nearest`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
