@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hệ thống quản lý bãi đỗ xe đại học</title>
+  <script src="/env.js"></script> <!-- Load biến môi trường trước -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <style>
@@ -513,7 +514,8 @@ flatpickr("#report-to", {
 // Cập nhật trạng thái các nhà xe
 async function updateParkingStatus() {
   try {
-    const response = await fetch('http://localhost:8080/parking-status');
+   
+    const response = await fetch(`${ENV.API_BASE_URL}/parking-status`);
     const statusData = await response.json();
     
     const tableBody = document.getElementById('parking-status-body');
@@ -568,7 +570,7 @@ async function searchCard() {
   if (!searchTerm) return;
 
   try {
-    const response = await fetch(`http://localhost:8080/card-info?search=${encodeURIComponent(searchTerm)}`);
+    const response = await fetch(`${ENV.API_BASE_URL}/card-info?search=${encodeURIComponent(searchTerm)}`);
     const cardInfo = await response.json();
     
     if (response.ok) {
@@ -617,7 +619,7 @@ async function topUpCard() {
   }
 
   try {
-    const response = await fetch(`http://localhost:8080/top-up`, {
+    const response = await fetch(`${ENV.API_BASE_URL}/top-up`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -662,7 +664,7 @@ async function generateReport() {
   const toDate = document.getElementById('report-to').value;
   
   try {
-    const response = await fetch(`http://localhost:8080/report?parking=${parkingId}&from=${encodeURIComponent(fromDate)}&to=${encodeURIComponent(toDate)}`);
+    const response = await fetch(`${ENV.API_BASE_URL}/report?parking=${parkingId}&from=${encodeURIComponent(fromDate)}&to=${encodeURIComponent(toDate)}`);
     const reportData = await response.json();
     
     if (!response.ok) {
@@ -802,7 +804,7 @@ function openTab(tabId) {
 // Tải danh sách sinh viên từ backend
 async function loadStudents() {
   try {
-    const response = await fetch('http://localhost:8080/students');
+    const response = await fetch('${ENV.API_BASE_URL}/students');
     
     // Kiểm tra response
     if (!response.ok) {
@@ -881,7 +883,7 @@ function escapeHTML(str) {
 // Chỉnh sửa sinh viên
 async function editStudent(id) {
   try {
-    const response = await fetch(`http://localhost:8080/students/${id}`);
+    const response = await fetch(`${ENV.API_BASE_URL}/students/${id}`);
     
     if (!response.ok) {
       throw new Error('Không tải được thông tin sinh viên');
@@ -946,12 +948,12 @@ async function saveStudent() {
   }
   
   try {
-    let url = 'http://localhost:8080/students';
+    let url = '${ENV.API_BASE_URL}/students';
     let method = 'POST';
     
     // Nếu đang chỉnh sửa thì dùng PUT
     if (editingStudentId) {
-      url = `http://localhost:8080/students/${editingStudentId}`;
+      url = `${ENV.API_BASE_URL}/students/${editingStudentId}`;
       method = 'PUT';
     }
     
@@ -984,7 +986,7 @@ async function deleteStudent(id) {
   if (!confirm('Bạn có chắc chắn muốn xóa sinh viên này?')) return;
   
   try {
-    const response = await fetch(`http://localhost:8080/students/${id}`, {
+    const response = await fetch(`${ENV.API_BASE_URL}/students/${id}`, {
       method: 'DELETE'
     });
     
@@ -1007,7 +1009,7 @@ async function searchStudents() {
   const searchTerm = document.getElementById('search-student').value.toLowerCase().trim();
   
   try {
-    const response = await fetch('http://localhost:8080/students');
+    const response = await fetch('${ENV.API_BASE_URL}/students');
     
     if (!response.ok) {
       throw new Error('Không tải được danh sách sinh viên');
@@ -1054,7 +1056,7 @@ async function findPath() {
   }
   
   try {
-    const response = await fetch(`http://localhost:8080/path?from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}`);
+    const response = await fetch(`${ENV.API_BASE_URL}/path?from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}`);
     const pathData = await response.json();
     
     if (!response.ok) {
@@ -1088,7 +1090,7 @@ async function suggestParking() {
   }
   
   try {
-    const response = await fetch('http://localhost:8080/nearest', {
+    const response = await fetch('${ENV.API_BASE_URL}/nearest', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
