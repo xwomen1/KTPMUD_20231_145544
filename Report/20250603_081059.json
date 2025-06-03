@@ -1,0 +1,65 @@
+[
+    {
+        "entryCount": 22,
+        "exitCount": 22,
+        "parkingName": "Nha xe D9",
+        "revenue": 14956808.720000003,
+        "usageRate": 7.333333333333333
+    },
+    {
+        "entryCount": 25,
+        "exitCount": 25,
+        "parkingName": "Nha xe D4-6",
+        "revenue": 17000112.980000004,
+        "usageRate": 8.333333333333332
+    },
+    {
+        "entryCount": 21,
+        "exitCount": 21,
+        "parkingName": "Nha xe D3-5",
+        "revenue": 15009256.94,
+        "usageRate": 4.2
+    },
+    {
+        "entryCount": 19,
+        "exitCount": 19,
+        "parkingName": "Nha xe B1",
+        "revenue": 10941973.559999997,
+        "usageRate": 19.0
+    },
+    {
+        "entryCount": 26,
+        "exitCount": 26,
+        "parkingName": "Nha xe B13",
+        "revenue": 20622280.43,
+        "usageRate": 26.0
+    },
+    {
+        "entryCount": 24,
+        "exitCount": 24,
+        "parkingName": "Nha xe C7",
+        "revenue": 19635217.439999998,
+        "usageRate": 8.0
+    },
+    {
+        "entryCount": 29,
+        "exitCount": 29,
+        "parkingName": "Nha xe C5",
+        "revenue": 22097120.600000005,
+        "usageRate": 14.499999999999998
+    },
+    {
+        "entryCount": 22,
+        "exitCount": 22,
+        "parkingName": "Nha xe TC",
+        "revenue": 16492146.590000004,
+        "usageRate": 4.3999999999999995
+    },
+    {
+        "entryCount": 13,
+        "exitCount": 13,
+        "parkingName": "Nha xe B6",
+        "revenue": 11744370.57,
+        "usageRate": 13.0
+    }
+]

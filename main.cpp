@@ -13,6 +13,10 @@
 #include <ctime>
 #include "httplib.h"
 #include "json.hpp"
+#include <sys/stat.h>
+#ifdef _WIN32
+#include <direct.h>
+#endif
 
 // Define M_PI if not defined
 #ifndef M_PI
@@ -812,83 +816,105 @@ int main() {
         }
     });
 
-    // API lấy báo cáo thống kê
-    server.Get("/report", [&](const httplib::Request& req, httplib::Response& res) {
-        // Lấy tham số
-        std::string parking = req.get_param_value("parking");
-        std::string fromDate = req.get_param_value("from");
-        std::string toDate = req.get_param_value("to");
-        
-        // Tải lại lịch sử để có dữ liệu mới nhất
-        auto history = LoadParkingHistory();
-        
-        json report;
-        
-        // Tạo bản đồ tổng hợp
-        std::unordered_map<std::string, json> parkingReports;
-        
-        // Khởi tạo dữ liệu cho từng bãi xe
-        for (const auto& pair : parkingLots) {
-            const std::string& name = pair.first;
-            parkingReports[name] = {
-                {"parkingName", name},
-                {"entryCount", 0},
-                {"exitCount", 0},
-                {"revenue", 0.0},
-                {"usageRate", 0.0}
-            };
+ server.Get("/report", [&](const httplib::Request& req, httplib::Response& res) {
+    // Lấy tham số
+    std::string parking = req.get_param_value("parking");
+    std::string fromDate = req.get_param_value("from");
+    std::string toDate = req.get_param_value("to");
+    
+    // Tải lại lịch sử để có dữ liệu mới nhất
+    auto history = LoadParkingHistory();
+    
+    json report;
+    
+    // Tạo bản đồ tổng hợp
+    std::unordered_map<std::string, json> parkingReports;
+    
+    // Khởi tạo dữ liệu cho từng bãi xe
+    for (const auto& pair : parkingLots) {
+        const std::string& name = pair.first;
+        parkingReports[name] = {
+            {"parkingName", name},
+            {"entryCount", 0},
+            {"exitCount", 0},
+            {"revenue", 0.0},
+            {"usageRate", 0.0}
+        };
+    }
+    
+    // Xử lý từng bản ghi lịch sử
+    for (const auto& record : history) {
+        // Kiểm tra bãi xe
+        if (!parking.empty() && parking != "all" && record.parkingLot != parking) {
+            continue;
         }
         
-        // Xử lý từng bản ghi lịch sử
-        for (const auto& record : history) {
-            // Kiểm tra bãi xe
-            if (!parking.empty() && parking != "all" && record.parkingLot != parking) {
-                continue;
-            }
+        // Kiểm tra thời gian
+        if (!fromDate.empty()) {
+            time_t entryTime = stringToTime(record.entryTime);
+            time_t fromTime = stringToTime(fromDate);
+            if (entryTime < fromTime) continue;
+        }
+        
+        if (!toDate.empty()) {
+            time_t entryTime = stringToTime(record.entryTime);
+            time_t toTime = stringToTime(toDate);
+            if (entryTime > toTime) continue;
+        }
+        
+        // Cập nhật báo cáo
+        auto& reportData = parkingReports[record.parkingLot];
+        reportData["entryCount"] = reportData["entryCount"].get<int>() + 1;
+        
+        if (!record.exitTime.empty()) {
+            reportData["exitCount"] = reportData["exitCount"].get<int>() + 1;
+            reportData["revenue"] = reportData["revenue"].get<double>() + record.fee;
+        }
+    }
+    
+    // Tính tỉ lệ sử dụng và thêm vào kết quả
+    for (auto& pair : parkingReports) {
+        auto& reportData = pair.second;
+        std::string name = reportData["parkingName"];
+        
+        if (parkingLots.find(name) != parkingLots.end()) {
+            int capacity = parkingLots[name].capacity;
+            int entryCount = reportData["entryCount"];
             
-            // Kiểm tra thời gian
-            if (!fromDate.empty()) {
-                time_t entryTime = stringToTime(record.entryTime);
-                time_t fromTime = stringToTime(fromDate);
-                if (entryTime < fromTime) continue;
-            }
-            
-            if (!toDate.empty()) {
-                time_t entryTime = stringToTime(record.entryTime);
-                time_t toTime = stringToTime(toDate);
-                if (entryTime > toTime) continue;
-            }
-            
-            // Cập nhật báo cáo
-            auto& reportData = parkingReports[record.parkingLot];
-            reportData["entryCount"] = reportData["entryCount"].get<int>() + 1;
-            
-            if (!record.exitTime.empty()) {
-                reportData["exitCount"] = reportData["exitCount"].get<int>() + 1;
-                reportData["revenue"] = reportData["revenue"].get<double>() + record.fee;
+            if (capacity > 0) {
+                double usageRate = (static_cast<double>(entryCount) / capacity) * 100;
+                reportData["usageRate"] = usageRate;
             }
         }
         
-        // Tính tỉ lệ sử dụng và thêm vào kết quả
-        for (auto& pair : parkingReports) {
-            auto& reportData = pair.second;
-            std::string name = reportData["parkingName"];
-            
-            if (parkingLots.find(name) != parkingLots.end()) {
-                int capacity = parkingLots[name].capacity;
-                int entryCount = reportData["entryCount"];
-                
-                if (capacity > 0) {
-                    double usageRate = (static_cast<double>(entryCount) / capacity) * 100;
-                    reportData["usageRate"] = usageRate;
-                }
-            }
-            
-            report.push_back(reportData);
-        }
-        
-        res.set_content(report.dump(), "application/json");
-    });
+        report.push_back(reportData);
+    }
+
+    // Tạo thư mục Report nếu chưa tồn tại
+    #ifdef _WIN32
+        _mkdir("Report");
+    #else
+        mkdir("Report", 0777);
+    #endif
+
+    // Lấy thời gian hiện tại để đặt tên file
+    auto now = std::chrono::system_clock::now();
+    auto in_time_t = std::chrono::system_clock::to_time_t(now);
+    std::stringstream ss;
+    ss << std::put_time(std::localtime(&in_time_t), "%Y%m%d_%H%M%S");
+    std::string filename = "Report/" + ss.str() + ".json";
+
+    // Lưu báo cáo ra file
+    std::ofstream outFile(filename);
+    outFile << report.dump(4);
+    outFile.close();
+
+    // Trả về tên file cho client
+    res.set_content(json{
+        {"message", "Report generated successfully"},
+        {"file", filename}
+    }.dump(), "application/json");
+});
 
     // Serve static files
     server.set_mount_point("/", "./public");
