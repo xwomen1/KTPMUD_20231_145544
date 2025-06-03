@@ -535,7 +535,11 @@ std::string FindNearestAvailableParking(const std::string& fromID) {
     
     return nearest;
 }
-
+void setCORS(httplib::Response& res) {
+    res.set_header("Access-Control-Allow-Origin", "*");
+    res.set_header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+    res.set_header("Access-Control-Allow-Headers", "Content-Type");
+}
 
 int main() {
     httplib::Server server;
@@ -548,8 +552,10 @@ int main() {
     auto parkingHistory = LoadParkingHistory();
 
 
+
     // API thêm sinh viên mới
     server.Post("/students", [&students](const httplib::Request& req, httplib::Response& res) {
+        setCORS(res);
         try {
             json j = json::parse(req.body);
             Student s;
@@ -578,6 +584,7 @@ int main() {
     // API lấy thông tin sinh viên
        // API thêm sinh viên mới
     server.Post("/students", [&students](const httplib::Request& req, httplib::Response& res) {
+        setCORS(res);
         try {
             json j = json::parse(req.body);
             Student s;
@@ -605,6 +612,7 @@ int main() {
 
     // API lấy thông tin sinh viên
     server.Get("/students/:id", [&students](const httplib::Request& req, httplib::Response& res) {
+        setCORS(res);
         std::string id = req.path_params.at("id");
         
         auto it = students.find(id);
@@ -619,6 +627,7 @@ int main() {
 
     // API cập nhật thông tin sinh viên
     server.Put("/students/:id", [&students](const httplib::Request& req, httplib::Response& res) {
+        setCORS(res);
         try {
             std::string id = req.path_params.at("id");
             json j = json::parse(req.body);
@@ -644,6 +653,7 @@ int main() {
 
     // API xóa sinh viên
     server.Delete("/students/:id", [&students](const httplib::Request& req, httplib::Response& res) {
+       setCORS(res);
         std::string id = req.path_params.at("id");
         
         if (students.erase(id)) {
@@ -657,6 +667,7 @@ int main() {
 
     // API lấy danh sách tất cả sinh viên
     server.Get("/students", [&students](const httplib::Request&, httplib::Response& res) {
+       setCORS(res);
         json j;
         for (const auto& pair : students) {
             j.push_back(pair.second);
@@ -666,6 +677,7 @@ int main() {
 
     // API lấy trạng thái các nhà xe
     server.Get("/parking-status", [&parkingLots](const httplib::Request&, httplib::Response& res) {
+        setCORS(res);
         json j;
         for (const auto& pair : parkingLots) {
             const ParkingLot& p = pair.second;
@@ -682,6 +694,7 @@ int main() {
 
     // API tìm kiếm thông tin thẻ xe
     server.Get("/card-info", [&students](const httplib::Request& req, httplib::Response& res) {
+        setCORS(res);
         std::string search = req.get_param_value("search");
         
         // Tìm theo ID sinh viên hoặc biển số xe
@@ -706,6 +719,7 @@ int main() {
 
     // API nạp tiền vào thẻ xe
     server.Post("/top-up", [&students](const httplib::Request& req, httplib::Response& res) {
+        setCORS(res);
         try {
             json j = json::parse(req.body);
             std::string studentId = j["studentId"];
@@ -742,6 +756,7 @@ int main() {
 
     // API lấy trạng thái các nhà xe
     server.Get("/parking-status", [](const httplib::Request&, httplib::Response& res) {
+       setCORS(res); 
         json j;
         for (const auto& p : points) {
             if (p.first.find("Nha xe") != std::string::npos) {
@@ -759,6 +774,7 @@ int main() {
 
     // API tìm kiếm thông tin thẻ xe
     server.Get("/card-info", [&students](const httplib::Request& req, httplib::Response& res) {
+      setCORS(res); 
         std::string search = req.get_param_value("search");
         
         // Tìm theo ID sinh viên hoặc biển số xe
@@ -783,6 +799,7 @@ int main() {
 
     // API nạp tiền vào thẻ xe
     server.Post("/top-up", [&students](const httplib::Request& req, httplib::Response& res) {
+        setCORS(res);
         try {
             json j = json::parse(req.body);
             std::string studentId = j["studentId"];
@@ -817,6 +834,7 @@ int main() {
     });
 
  server.Get("/report", [&](const httplib::Request& req, httplib::Response& res) {
+    setCORS(res);
     // Lấy tham số
     std::string parking = req.get_param_value("parking");
     std::string fromDate = req.get_param_value("from");
@@ -935,6 +953,7 @@ int main() {
 
     // API lấy đường đi
     server.Get("/path", [](const httplib::Request& req, httplib::Response& res) {
+        setCORS(res);
         std::string from = req.get_param_value("from");
         std::string to = req.get_param_value("to");
         
@@ -961,6 +980,7 @@ int main() {
 
     // API tìm nhà xe gần nhất còn chỗ
     server.Post("/nearest", [](const httplib::Request& req, httplib::Response& res) {
+        setCORS(res);
         try {
             json j = json::parse(req.body);
             Location loc;
@@ -1013,6 +1033,7 @@ int main() {
     
     // Default route - serve index.html
     server.Get("/", [](const httplib::Request&, httplib::Response& res) {
+        setCORS(res);
         std::ifstream file("./index.html");
         if (file) {
             std::stringstream buffer;
