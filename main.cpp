@@ -541,6 +541,7 @@ void setCORS(httplib::Response& res) {
     res.set_header("Access-Control-Allow-Headers", "Content-Type");
 }
 
+
 int main() {
     httplib::Server server;
     
@@ -1015,9 +1016,11 @@ int main() {
             res.set_content("File not found", "text/plain");
         }
     });
-server.Options(".*", [](const httplib::Request&, httplib::Response& res) {
-    setCORS(res);
-    res.status = 204; // No Content
+server.Options(R"(/.*)", [](const httplib::Request& req, httplib::Response& res) {
+    res.set_header("Access-Control-Allow-Origin", "*");
+    res.set_header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+    res.set_header("Access-Control-Allow-Headers", "Content-Type");
+    res.status = 204;  // No Content
 });
 
     std::cout << "Server starting on port 8080..." << std::endl;
