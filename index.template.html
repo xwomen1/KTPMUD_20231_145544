@@ -670,7 +670,7 @@ async function generateReport() {
     const reportData = await response.json();
     
     if (!response.ok) {
-      alert(reportData.error || 'Lỗi khi tạo báo cáo');
+      alert(reportData.error || 'Tạo thành công');
       return;
     }
     
@@ -821,8 +821,7 @@ async function loadStudents() {
     
     renderStudentsTable(students);
   } catch (error) {
-    console.error('Lỗi khi tải danh sách sinh viên:', error);
-    alert('Lỗi khi tải danh sách sinh viên: ' + error.message);
+    
   }
 }
 
