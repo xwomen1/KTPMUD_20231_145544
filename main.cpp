@@ -581,34 +581,6 @@ int main() {
         }
     });
 
-    // API lấy thông tin sinh viên
-       // API thêm sinh viên mới
-    server.Post("/students", [&students](const httplib::Request& req, httplib::Response& res) {
-        setCORS(res);
-        try {
-            json j = json::parse(req.body);
-            Student s;
-            s.id = j["id"].get<std::string>();
-            s.name = j["name"].get<std::string>();
-            s.faculty = j["faculty"].get<std::string>();
-            s.licensePlate = j["licensePlate"].get<std::string>();
-            
-            if (students.find(s.id) != students.end()) {
-                res.status = 400;
-                res.set_content(json{{"error", "Student ID already exists"}}.dump(), "application/json");
-                return;
-            }
-            
-            students[s.id] = s;
-            SaveStudents(students);
-            
-            res.status = 201;
-            res.set_content(json{{"message", "Student added successfully"}, {"id", s.id}}.dump(), "application/json");
-        } catch (const std::exception& e) {
-            res.status = 400;
-            res.set_content(json{{"error", "Invalid student data"}}.dump(), "application/json");
-        }
-    });
 
     // API lấy thông tin sinh viên
     server.Get("/students/:id", [&students](const httplib::Request& req, httplib::Response& res) {
@@ -1043,6 +1015,10 @@ int main() {
             res.set_content("File not found", "text/plain");
         }
     });
+server.Options(".*", [](const httplib::Request&, httplib::Response& res) {
+    setCORS(res);
+    res.status = 204; // No Content
+});
 
     std::cout << "Server starting on port 8080..." << std::endl;
     server.listen("0.0.0.0", 8080);
