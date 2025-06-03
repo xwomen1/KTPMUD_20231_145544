@@ -907,6 +907,7 @@ int main() {
         
         report.push_back(reportData);
     }
+        res.set_content(report.dump(), "application/json");
 
     // Tạo thư mục Report nếu chưa tồn tại
     #ifdef _WIN32
@@ -927,11 +928,7 @@ int main() {
     outFile << report.dump(4);
     outFile.close();
 
-    // Trả về tên file cho client
-    res.set_content(json{
-        {"message", "Report generated successfully"},
-        {"file", filename}
-    }.dump(), "application/json");
+  
 });
 
     // Serve static files
@@ -939,6 +936,7 @@ int main() {
     
     // Default route - serve index.html
     server.Get("/", [](const httplib::Request&, httplib::Response& res) {
+        setCORS(res);
         std::ifstream file("./index.html");
         if (file) {
             std::stringstream buffer;
@@ -975,6 +973,7 @@ int main() {
 
     // API cập nhật số xe đang đỗ
     server.Post("/update-occupied", [](const httplib::Request& req, httplib::Response& res) {
+        setCORS(res);
         updateOccupiedHandler(req, res);
     });
 
