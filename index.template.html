@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hệ thống quản lý bãi đỗ xe đại học</title>
- <script>
+   <script>
     const API_BASE_URL = "${API_BASE_URL}";
   </script>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
@@ -516,7 +516,6 @@ flatpickr("#report-to", {
 // Cập nhật trạng thái các nhà xe
 async function updateParkingStatus() {
   try {
-   
     const response = await fetch(`${API_BASE_URL}/parking-status`);
     const statusData = await response.json();
     
@@ -586,27 +585,22 @@ async function searchCard() {
       const transactionsBody = document.getElementById('card-transactions');
       transactionsBody.innerHTML = '';
       
-      cardInfo.transactions.forEach(transactionStr => {
-  const [timePart, rest] = transactionStr.split(' - ');
-  const [description, amountRaw] = rest.split(': ');
-  const amount = parseFloat(amountRaw.replace(/[^\d.-]/g, ''));
-
-  const row = document.createElement('tr');
-  row.innerHTML = `
-    <td>${new Date(timePart).toLocaleString()}</td>
-    <td>${description}</td>
-    <td style="color: ${amount >= 0 ? '#28a745' : '#dc3545'}">${amount >= 0 ? '+' : ''}${amount.toLocaleString()} VND</td>
-  `;
-  transactionsBody.appendChild(row);
-});
-
+      cardInfo.transactions.forEach(transaction => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${new Date(transaction.time).toLocaleString()}</td>
+          <td>${transaction.description}</td>
+          <td style="color: ${transaction.amount >= 0 ? '#28a745' : '#dc3545'}">${transaction.amount >= 0 ? '+' : ''}${transaction.amount.toLocaleString()} VND</td>
+        `;
+        transactionsBody.appendChild(row);
+      });
     } else {
       alert(cardInfo.error || 'Không tìm thấy thông tin thẻ');
       document.getElementById('card-info').style.display = 'none';
     }
   } catch (error) {
-    
-   
+    console.error('Lỗi khi tìm kiếm thẻ:', error);
+    alert('Lỗi khi tìm kiếm thông tin thẻ');
   }
 }
 
@@ -670,7 +664,7 @@ async function generateReport() {
     const reportData = await response.json();
     
     if (!response.ok) {
-      alert(reportData.error || 'Tạo thành công');
+      alert(reportData.error || 'Lỗi khi tạo báo cáo');
       return;
     }
     
@@ -821,7 +815,8 @@ async function loadStudents() {
     
     renderStudentsTable(students);
   } catch (error) {
-    
+    console.error('Lỗi khi tải danh sách sinh viên:', error);
+    alert('Lỗi khi tải danh sách sinh viên: ' + error.message);
   }
 }
 
