@@ -64,7 +64,7 @@ ssh "$REMOTE_USER@$REMOTE_SERVER" << EOF
   chmod +x "$REMOTE_DEPLOY_DIR"/*
   
   # Update IP in index file
-  sed -i 's/\.1\S.102\.2/172.25.250.9/g' "$INDEX_FILE"
+  sed -i 's/172\.25\.250\.9/172.25.250.10/g' "$INDEX_FILE"
   
   # Start application
   cd "$REMOTE_DEPLOY_DIR"
